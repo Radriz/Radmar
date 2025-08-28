@@ -39,6 +39,22 @@ header{
 .navlinks a{padding:8px 12px;border-radius:10px;background:transparent}
 .tools{display:flex;gap:10px;align-items:center}
 
+/* Мобильная навигация */
+.menu-toggle{display:none;flex-direction:column;gap:4px;padding:8px;min-width:40px;height:40px;justify-content:center;align-items:center}
+.burger-line{width:20px;height:2px;background:var(--text);border-radius:1px;transition:all 0.3s ease}
+.menu-toggle[aria-pressed="true"] .burger-line:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.menu-toggle[aria-pressed="true"] .burger-line:nth-child(2){opacity:0}
+.menu-toggle[aria-pressed="true"] .burger-line:nth-child(3){transform:rotate(-45deg) translate(7px,-6px)}
+
+@media(max-width:768px){
+  .navlinks{position:fixed;top:80px;left:0;right:0;background:rgba(11,12,16,.95);backdrop-filter:blur(10px);flex-direction:column;padding:20px;gap:0;transform:translateY(-100%);opacity:0;visibility:hidden;transition:all 0.3s ease;border-bottom:1px solid rgba(255,255,255,.06)}
+  .navlinks a{padding:16px 20px;border-radius:0;border-bottom:1px solid rgba(255,255,255,.06);width:100%;text-align:left}
+  .navlinks a:last-child{border-bottom:none}
+  .navlinks.active{transform:translateY(0);opacity:1;visibility:visible}
+  .menu-toggle{display:flex}
+  .tools .btn:not(.menu-toggle){display:none}
+}
+
 .btn{border:none;border-radius:12px;padding:10px 14px;background:var(--brand);color:#091019;font-weight:600;cursor:pointer}
 .btn.secondary{background:#1a2333;color:var(--text);border:1px solid rgba(255,255,255,.08)}
 .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.12);color:var(--text)}

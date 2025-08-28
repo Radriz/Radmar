@@ -25,6 +25,11 @@
       </nav>
       <div class="tools">
         <button id="a11yToggle" class="btn ghost" aria-pressed="false" aria-label="Переключить версию для слабовидящих">Для слабовидящих</button>
+        <button id="menuToggle" class="btn ghost menu-toggle" aria-pressed="false" aria-label="Открыть меню">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -253,6 +258,24 @@
     a11yBtn?.addEventListener('click', ()=>{
       const on = document.body.classList.toggle('a11y');
       a11yBtn.setAttribute('aria-pressed', on? 'true':'false');
+    });
+
+    // Бургер-меню
+    const menuToggle = document.getElementById('menuToggle');
+    const navlinks = document.querySelector('.navlinks');
+    
+    menuToggle?.addEventListener('click', ()=>{
+      const isOpen = menuToggle.getAttribute('aria-pressed') === 'true';
+      menuToggle.setAttribute('aria-pressed', !isOpen);
+      navlinks.classList.toggle('active');
+    });
+
+    // Закрыть меню при клике на ссылку
+    navlinks?.addEventListener('click', (e)=>{
+      if(e.target.tagName === 'A'){
+        menuToggle.setAttribute('aria-pressed', 'false');
+        navlinks.classList.remove('active');
+      }
     });
 
     // Год в футере
