@@ -1,0 +1,98 @@
+:root{
+  --bg: #0b0c10;
+  --card: #111318;
+  --muted: #9aa3b2;
+  --text: #e8ecf2;
+  --brand: #47a3ff;
+  --accent: #7ce2b1;
+  --danger: #ff7a7a;
+  --radius: 18px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: linear-gradient(180deg, #0b0c10 0%, #0b0c10 40%, #0e1116 100%);
+  color:var(--text);
+  line-height:1.55;
+}
+
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{max-width:1100px;margin:0 auto;padding:0 18px}
+
+header{
+  position:sticky;top:0;z-index:1000;
+  backdrop-filter:saturate(180%) blur(10px);
+  background: rgba(11,12,16,.72);
+  border-bottom:1px solid rgba(255,255,255,.06)
+}
+
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{height:48px;width:auto;border-radius:12px;object-fit:contain;box-shadow:0 6px 18px rgba(71,163,255,.35)}
+.brand h1{font-size:18px;margin:0}
+.navlinks{display:flex;flex-wrap:wrap;gap:10px}
+.navlinks a{padding:8px 12px;border-radius:10px;background:transparent}
+.tools{display:flex;gap:10px;align-items:center}
+
+.btn{border:none;border-radius:12px;padding:10px 14px;background:var(--brand);color:#091019;font-weight:600;cursor:pointer}
+.btn.secondary{background:#1a2333;color:var(--text);border:1px solid rgba(255,255,255,.08)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.12);color:var(--text)}
+
+.search{display:flex;align-items:center;background:#0f1218;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:8px 10px;gap:8px}
+.search input{background:transparent;border:none;outline:none;color:var(--text);width:220px}
+
+.hero{padding:56px 0 28px}
+.heroCard{background:linear-gradient(180deg,#111318,#0f1218);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;display:grid;gap:18px}
+.hero h2{font-size:36px;line-height:1.15;margin:0}
+
+.grid{display:grid;gap:18px}
+@media(min-width:900px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.grid.cols-3{grid-template-columns:2fr 1fr 1fr}}
+
+.kpi{display:grid;gap:8px;padding:14px;border-radius:14px;background:#0f1218;border:1px dashed rgba(255,255,255,.12)}
+.kpi small{color:var(--muted)}
+
+.card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px}
+.card h3{margin:0 0 8px}
+
+.muted{color:var(--muted)}
+
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:12px;color:var(--muted)}
+
+.badge{display:inline-block;padding:6px 10px;border-radius:9px;background:#102133;border:1px solid rgba(71,163,255,.3);color:#a9d4ff;font-size:12px}
+
+.hero-image{display:flex;align-items:center;justify-content:center;margin:18px 0}
+.main-photo{width:100%;height:auto;border-radius:var(--radius);object-fit:cover;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+
+section{padding:28px 0}
+section h2{font-size:26px;margin:0 0 14px}
+
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.06)}
+th{text-align:left;color:#c7d2de;font-weight:600}
+tr:hover td{background:#10151b}
+
+.disclaimer{font-size:14px;color:#c6d6ff;background:#0f1b2e;border:1px solid rgba(71,163,255,.25);padding:12px 14px;border-radius:12px}
+.danger{background:#2a0f14;border-color:rgba(255,122,122,.35);color:#ffd6d6}
+
+footer{margin-top:36px;padding:28px 0 48px;background:#0a0c10;border-top:1px solid rgba(255,255,255,.06)}
+.footerGrid{display:grid;gap:16px}
+@media(min-width:900px){.footerGrid{grid-template-columns:2fr 1fr 1fr}}
+
+/* Версия для слабовидящих */
+body.a11y{background:#000 !important;color:#fff !important}
+body.a11y .card, body.a11y .heroCard{background:#000;border-color:#fff}
+body.a11y a{color:#fff;text-decoration:underline}
+body.a11y .disclaimer{background:#000;border-color:#fff;color:#fff}
+body.a11y .search{background:#000;border-color:#fff}
+
+/* Простой якорный оффсет */
+:target{scroll-margin-top:90px}
+
+/* Комментарии TODO подсветка */
+.todo{display:block;margin:10px 0;padding:10px;border-radius:10px;background:#2a2011;border:1px solid #6f5a1a;color:#ffd88a;font-size:14px}
