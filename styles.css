@@ -26,6 +26,7 @@ body{
   background-attachment: fixed;
   background-repeat: no-repeat;
   color:var(--text);
+  font-size:18px;
   line-height:1.55;
   position: relative;
 }
@@ -116,7 +117,7 @@ header{
 .search{display:flex;align-items:center;background:#0f1218;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:8px 10px;gap:8px}
 .search input{background:transparent;border:none;outline:none;color:var(--text);width:220px}
 
-.hero{padding:56px 0 28px}
+.hero{padding:56px 0 8px}
 .heroCard{background:linear-gradient(180deg,#111318,#0f1218);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;display:grid;gap:18px}
 .hero h2{
   font-size:36px;
@@ -239,6 +240,11 @@ header{
 
 .kpi{display:grid;gap:8px;padding:14px;border-radius:14px;background:#0f1218;border:1px dashed rgba(255,255,255,.12)}
 .kpi small{color:var(--muted)}
+.work-hours-list{display:flex;flex-direction:column;gap:6px}
+
+@media(min-width:900px){
+  .work-hours-list{flex-direction:row;flex-wrap:wrap;gap:24px}
+}
 
 .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px}
 .card h3{margin:0 0 8px}
@@ -246,19 +252,84 @@ header{
 .muted{color:var(--muted)}
 
 .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:12px;color:var(--muted)}
+.downloads-block{font-size:20px;line-height:1.7}
+.downloads-block a{font-weight:600}
+.downloads-title{
+  font-size:20px;
+  font-weight:700;
+  color:var(--text);
+  margin-bottom:10px;
+  padding:10px 16px;
+}
 
 .badge{display:inline-block;padding:6px 10px;border-radius:9px;background:#102133;border:1px solid rgba(71,163,255,.3);color:#a9d4ff;font-size:12px}
 
-.hero-image{display:flex;align-items:center;justify-content:center;margin:18px 0}
+.hero-image{display:flex;align-items:center;justify-content:center;margin:0}
 .main-photo{width:100%;height:auto;border-radius:var(--radius);object-fit:cover;box-shadow:0 8px 24px rgba(0,0,0,.3)}
 
 section{padding:28px 0}
+#doctors{padding-top:8px}
 section h2{font-size:26px;margin:0 0 14px}
 
 table{width:100%;border-collapse:collapse}
 th,td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.06)}
 th{text-align:left;color:#c7d2de;font-weight:600}
 tr:hover td{background:#10151b}
+
+.price-list{display:grid;gap:22px}
+.price-list h2{margin-bottom:0}
+.price-search{display:grid;gap:8px}
+.price-search-label{font-weight:700;color:var(--text)}
+.price-search input{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background:#0f1218;
+  color:var(--text);
+  font-size:16px;
+}
+.price-search input::placeholder{color:var(--muted)}
+.price-search-empty{margin:0}
+.price-section{
+  display:grid;
+  gap:12px;
+  padding:22px;
+  border-radius:var(--radius);
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.08);
+}
+.price-section h3{margin:0;font-size:28px;line-height:1.2}
+.price-table-wrap{
+  overflow-x:auto;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  background:#0f1218;
+}
+.price-table{min-width:980px}
+.price-table thead th{
+  position:sticky;
+  top:0;
+  background:#131923;
+  z-index:1;
+}
+.price-table td, .price-table th{padding:12px 14px;vertical-align:top}
+.price-table td:nth-child(1),
+.price-table td:nth-child(2),
+.price-table td:nth-child(4),
+.price-table td:nth-child(5),
+.price-table th:nth-child(1),
+.price-table th:nth-child(2),
+.price-table th:nth-child(4),
+.price-table th:nth-child(5){white-space:nowrap}
+.price-group-row td{
+  background:#102133;
+  color:#d7e8ff;
+  font-size:15px;
+  letter-spacing:.02em;
+}
+.price-table tbody tr[hidden],
+.price-section[hidden]{display:none}
 
 .disclaimer{font-size:14px;color:#c6d6ff;background:#0f1b2e;border:1px solid rgba(71,163,255,.25);padding:12px 14px;border-radius:12px}
 .danger{background:#2a0f14;border-color:rgba(255,122,122,.35);color:#ffd6d6}
@@ -273,6 +344,14 @@ body.a11y .card, body.a11y .heroCard{background:#000;border-color:#fff}
 body.a11y a{color:#fff;text-decoration:underline}
 body.a11y .disclaimer{background:#000;border-color:#fff;color:#fff}
 body.a11y .search{background:#000;border-color:#fff}
+body.a11y{font-size:22px;line-height:1.7}
+body.a11y .downloads-block{font-size:24px}
+body.a11y .downloads-title{font-size:24px}
+body.a11y .price-section,
+body.a11y .price-table-wrap,
+body.a11y .price-search input{background:#000;border-color:#fff}
+body.a11y .price-group-row td,
+body.a11y .price-table thead th{background:#000;color:#fff}
 
 /* Простой якорный оффсет */
 :target{scroll-margin-top:90px}
