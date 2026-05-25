@@ -73,7 +73,7 @@ button,input,select,textarea{font:inherit}
   display:grid;
   grid-template-columns:auto 1fr auto;
   align-items:center;
-  gap:24px;
+  gap:16px;
   min-height:86px;
 }
 
@@ -85,9 +85,9 @@ button,input,select,textarea{font:inherit}
 }
 
 .brand-logo{
-  width:152px;
+  width:132px;
   height:auto;
-  max-height:64px;
+  max-height:56px;
   border-radius:14px;
   object-fit:contain;
   box-shadow:var(--shadow-soft);
@@ -96,14 +96,16 @@ button,input,select,textarea{font:inherit}
 .site-nav{
   display:flex;
   justify-content:center;
-  flex-wrap:wrap;
-  gap:8px;
+  flex-wrap:nowrap;
+  gap:4px;
+  white-space:nowrap;
 }
 .site-nav a,
 .mobile-menu a{
   color:var(--text-soft);
-  padding:11px 14px;
+  padding:10px 10px;
   border-radius:999px;
+  font-size:.95rem;
   transition:all .25s ease;
 }
 .site-nav a:hover,
@@ -423,8 +425,9 @@ p{margin:0 0 1rem}
 }
 .doctor-premium-photo{
   width:100%;
-  aspect-ratio:1/1.08;
+  aspect-ratio:1/1.2;
   object-fit:cover;
+  object-position:center top;
 }
 .doctor-premium-body{
   display:grid;
