@@ -1,606 +1,870 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ООО «РАДМАР» — стоматологическая клиника в Карагали</title>
-  <meta name="description" content="Официальный сайт ООО «РАДМАР». Стоматология: терапия, ортопедия, хирургия. Лицензия Л041-01153-30/00319289. Адрес: Астраханская обл., Приволжский район, с. Карагали, ул. Паромная, д. 5. Тел.: +7 (908) 614‑15‑23." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стоматология «Радмар» — премиальная стоматология в Карагали</title>
+  <meta name="description" content="Стоматология «Радмар»: безболезненное лечение, ортопедия, хирургия, ортодонтия и эстетическая стоматология. Современные технологии, опытные врачи и внимательный сервис.">
+  <meta name="theme-color" content="#f7f5f0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a href="#main" class="pill" style="position:absolute;left:-9999px">Перейти к контенту</a>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <img src="images/logo.jpg" alt="Логотип ООО РАДМАР" class="logo">
-        <h1>РАДМАР</h1>
-      </div>
-      <nav class="navlinks" aria-label="Главное меню">
-        <a href="#services">Услуги и цены</a>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <div class="container header-shell">
+      <a class="brand" href="#hero" aria-label="Стоматология Радмар">
+        <img src="./images/logo.jpg" alt="Логотип стоматологии Радмар" class="brand-logo">
+        <span class="brand-text">
+          <strong>Радмар</strong>
+          <small>Dental Clinic</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
         <a href="#doctors">Врачи</a>
-        <a href="#license">Лицензия</a>
-        <a href="#docs">Документы</a>
-        <a href="#patient">Пациенту</a>
+        <a href="#results">До/после</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#prices">Цены</a>
+        <a href="#faq">FAQ</a>
         <a href="#contacts">Контакты</a>
       </nav>
-      <div class="tools">
-        <button id="a11yToggle" class="btn ghost" aria-pressed="false" aria-label="Переключить версию для слабовидящих">Для слабовидящих</button>
-        <button id="menuToggle" class="btn ghost menu-toggle" aria-pressed="false" aria-label="Открыть меню">
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
+
+      <div class="header-actions">
+        <button id="a11yToggle" class="ghost-button" aria-pressed="false" aria-label="Переключить версию для слабовидящих">Версия для слабовидящих</button>
+        <a class="primary-button small-hide" href="#appointment">Онлайн-запись</a>
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <div class="container mobile-menu-inner">
+        <a href="#services">Услуги</a>
+        <a href="#doctors">Врачи</a>
+        <a href="#results">До/после</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#prices">Цены</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacts">Контакты</a>
+        <a class="primary-button" href="#appointment">Онлайн-запись</a>
       </div>
     </div>
   </header>
 
-  <main id="main" class="container">
-    <section class="hero">
-      <div class="heroCard">
-        <div class="grid cols-2">
-          <div>
-            <h2>Стоматология «РАДМАР»<br>
-              <span class="services-list">
-                <span class="service-item">терапия</span>
-                <span class="service-item">ортопедия</span>
-                <span class="service-item">хирургия</span>
-              </span>
-            </h2>
-            <p class="muted">ООО «РАДМАР». Адрес: <strong>Астраханская обл., Приволжский район, с. Карагали, ул. Паромная, д. 5</strong>.</p>
-            <p>
-              Тел.: <a href="tel:+79086141323">+7 (908) 614‑13‑23</a> · Почта: <a href="mailto:rad-mar@bk.ru">rad-mar@bk.ru</a>
-            </p>
-            <p class="badge">Лицензия: Л041‑01153‑30/00319289 от 19.02.2018. Лицензирующий орган: Минздрав Астраханской области. Срок: бессрочно.</p>
-            <div class="grid">
-              <div class="kpi work-hours">
-                <small>Режим работы</small>
-                <div class="work-hours-list">
-                  <span><strong>Пн - Пт:</strong> 09:00–20:00</span>
-                  <span><strong>Сб:</strong> 09:00–17:00</span>
-                  <span><strong>Вс:</strong> выходной</span>
-                </div>
+  <main id="main">
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Premium Dental Clinic</span>
+          <h1>Эстетичная и точная стоматология, в которую приходят за спокойствием и результатом</h1>
+          <p class="lead">
+            Помогаем лечить зубы без лишнего стресса, планировать большие реабилитации и возвращать уверенную улыбку.
+            Современная диагностика, понятный план лечения и деликатный сервис на каждом этапе.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="#appointment">Записаться</a>
+            <a class="secondary-button" href="#contacts">Получить консультацию</a>
+          </div>
+
+          <div class="hero-stats">
+            <article class="glass-card stat-card">
+              <strong>5 направлений</strong>
+              <span>От терапии до комплексной ортопедии и хирургии</span>
+            </article>
+            <article class="glass-card stat-card">
+              <strong>Индивидуальный подход</strong>
+              <span>План лечения строится под клиническую ситуацию и комфорт пациента</span>
+            </article>
+            <article class="glass-card stat-card">
+              <strong>Удобная коммуникация</strong>
+              <span>Телефон, WhatsApp, документы и консультации в одном контуре</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-photo-shell">
+            <img src="./images/main.jpg" alt="Интерьер и атмосфера стоматологии Радмар" class="hero-photo">
+            <div class="floating-card floating-card-top">
+              <span class="card-label">Безболезненное лечение</span>
+              <strong>Аккуратно, спокойно, поэтапно</strong>
+            </div>
+            <div class="floating-card floating-card-bottom">
+              <span class="card-label">Современный подход</span>
+              <strong>Точная диагностика и прогнозируемый результат</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid reveal">
+        <div>
+          <span class="eyebrow">Почему пациенты выбирают нас</span>
+          <h2>Сайт с ощущением luxury-clinic, лечение с ощущением ясности и доверия</h2>
+        </div>
+        <ul class="trust-list">
+          <li>Понятные планы лечения без перегруза медицинскими терминами</li>
+          <li>Опытные врачи с фокусом на качество, эстетику и долгосрочный результат</li>
+          <li>Комплексный подход: терапия, хирургия, ортопедия, ортодонтия</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Услуги</span>
+          <h2>Ключевые направления лечения и эстетической стоматологии</h2>
+          <p>Собрали услуги, за которыми к нам чаще всего обращаются: от лечения и удаления до ортопедических и эстетических решений.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c3.7 0 6 2.4 6 5.8 0 5-2.2 8.5-3.6 10.2-.9 1.1-1.7 2-2.4 2s-1.5-.9-2.4-2C8.2 16.3 6 12.8 6 7.8 6 4.4 8.3 2 12 2Z"/></svg>
+            </div>
+            <h3>Имплантация</h3>
+            <p>Восстановление утраченных зубов с точным планированием, хирургическим этапом и последующей ортопедией.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14c4.5-1.8 7.7-5 9.5-9 3.7 1.3 5.5 4 5.5 7.4 0 4.2-3 7.6-7 7.6-3 0-5.9-1.7-8-6Z"/></svg>
+            </div>
+            <h3>Виниры и эстетика</h3>
+            <p>Работаем с формой, цветом и пропорциями улыбки, сохраняя естественный и благородный визуальный результат.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 9 9l-6 .8 4.5 4.2L6.4 21 12 17.8 17.6 21l-1.1-7 4.5-4.2-6-.8Z"/></svg>
+            </div>
+            <h3>Отбеливание</h3>
+            <p>Профессиональные протоколы осветления зубов для более свежей и ухоженной улыбки без визуальной перегрузки.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7c2.5-2.5 11.5-2.5 14 0M7 11c2-2 8-2 10 0M9.5 15c1.3-1.2 3.7-1.2 5 0"/></svg>
+            </div>
+            <h3>Ортодонтия</h3>
+            <p>Коррекция прикуса и положения зубов с акцентом на эстетику лица, функцию и стабильность результата.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c3 0 5 2.2 5 5.2 0 3-1.4 5.3-2.4 6.7-.9 1.2-1.7 2.1-2.6 2.1s-1.7-.9-2.6-2.1C8.4 14.5 7 12.2 7 9.2 7 6.2 9 4 12 4Z"/></svg>
+            </div>
+            <h3>Лечение зубов</h3>
+            <p>Терапевтическое лечение, эндодонтия, реставрации и профилактика с вниманием к комфорту пациента.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 6l10 10"/></svg>
+            </div>
+            <h3>Хирургия</h3>
+            <p>Удаление зубов, хирургическая подготовка и имплантологические этапы в аккуратном и контролируемом формате.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="doctors" class="section section-soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Команда</span>
+          <h2>Врачи, которым доверяют лечение, восстановление и эстетику улыбки</h2>
+          <p>В клинике работают специалисты с практическим опытом в терапии, ортопедии и хирургии. По запросу предоставляем подробные сведения об образовании и аккредитации.</p>
+        </div>
+
+        <div class="doctors-premium-grid">
+          <article class="doctor-premium-card reveal">
+            <img src="./images/Курбанов Ризабек.JPG" alt="Курбанов Ризабек Хайдарович" class="doctor-premium-photo">
+            <div class="doctor-premium-body">
+              <span class="doctor-tag">Врач высшей категории</span>
+              <h3>Курбанов Ризабек Хайдарович</h3>
+              <p>Стоматолог-ортопед. Формирует долгосрочные ортопедические решения и комплексные планы восстановления улыбки.</p>
+              <ul>
+                <li>Стаж: 33 года</li>
+                <li>Специализация: ортопедия</li>
+                <li>Сертификаты и аккредитация: по запросу пациента</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="doctor-premium-card reveal">
+            <img src="./images/Курбанов Радик.JPG" alt="Курбанов Радик Ризабекович" class="doctor-premium-photo">
+            <div class="doctor-premium-body">
+              <span class="doctor-tag">Ортопедическая стоматология</span>
+              <h3>Курбанов Радик Ризабекович</h3>
+              <p>Стоматолог-ортопед. Работает с протезированием, восстановлением жевательной функции и эстетикой зубного ряда.</p>
+              <ul>
+                <li>Стаж: с 2017 года</li>
+                <li>Специализация: ортопедия</li>
+                <li>Сертификаты и аккредитация: по запросу пациента</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="doctor-premium-card reveal">
+            <img src="./images/Курбанов Марсель.JPG" alt="Курбанов Марсель Ризабекович" class="doctor-premium-photo">
+            <div class="doctor-premium-body">
+              <span class="doctor-tag">Современная ортопедия</span>
+              <h3>Курбанов Марсель Ризабекович</h3>
+              <p>Стоматолог-ортопед. Ведёт пациентов, которым важно совместить эстетику улыбки, точность посадки и комфорт.</p>
+              <ul>
+                <li>Стаж: с 2021 года</li>
+                <li>Специализация: ортопедия</li>
+                <li>Сертификаты и аккредитация: по запросу пациента</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="doctor-premium-card reveal">
+            <img src="./images/Алиев Муслим.JPG" alt="Алиев Муслим Махмудович" class="doctor-premium-photo">
+            <div class="doctor-premium-body">
+              <span class="doctor-tag">Терапевтический приём</span>
+              <h3>Алиев Муслим Махмудович</h3>
+              <p>Врач-стоматолог. Занимается лечением зубов, профилактикой и восстановлением функциональной эстетики.</p>
+              <ul>
+                <li>Стаж: с 2020 года</li>
+                <li>Специализация: терапия</li>
+                <li>Сертификаты и аккредитация: по запросу пациента</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="doctor-premium-card reveal">
+            <img src="./images/Джалмухамбетов Ерлан.JPG" alt="Джалмухамбетов Ерлан Гимранович" class="doctor-premium-photo">
+            <div class="doctor-premium-body">
+              <span class="doctor-tag">Терапия и диагностика</span>
+              <h3>Джалмухамбетов Ерлан Гимранович</h3>
+              <p>Врач-стоматолог-терапевт. Сопровождает пациентов на этапах диагностики, лечения и профилактических программ.</p>
+              <ul>
+                <li>Стаж: с 2021 года</li>
+                <li>Специализация: терапия</li>
+                <li>Сертификаты и аккредитация: по запросу пациента</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-actions reveal">
+          <a class="secondary-button" href="./documents/О  Врачах.docx" download>Скачать сведения о врачах</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section">
+      <div class="container results-grid">
+        <div class="section-head reveal">
+          <span class="eyebrow">До / после</span>
+          <h2>Наглядный результат лечения, эстетики и восстановления улыбки</h2>
+          <p>Показываем, как меняется качество улыбки, функция и визуальное восприятие после грамотно спланированного лечения.</p>
+        </div>
+
+        <div class="comparison-card reveal">
+          <div class="comparison-frame" id="comparisonFrame">
+            <img src="./images/hall.JPG" alt="До лечения" class="comparison-image comparison-image-before">
+            <div class="comparison-after-shell" id="comparisonAfterShell">
+              <img src="./images/main.jpg" alt="После лечения" class="comparison-image comparison-image-after">
+            </div>
+            <div class="comparison-label comparison-label-left">До</div>
+            <div class="comparison-label comparison-label-right">После</div>
+            <div class="comparison-divider" id="comparisonDivider"></div>
+          </div>
+          <label class="comparison-control">
+            <span>Сравнение результата</span>
+            <input id="comparisonRange" type="range" min="0" max="100" value="54" aria-label="Слайдер сравнения до и после">
+          </label>
+        </div>
+
+        <div class="cases-grid reveal">
+          <article class="case-card">
+            <strong>Эстетическая реабилитация</strong>
+            <p>Коррекция формы, цвета и общей архитектуры улыбки с акцентом на натуральность.</p>
+          </article>
+          <article class="case-card">
+            <strong>Ортопедическое восстановление</strong>
+            <p>Возвращаем жевательную эффективность и визуальную гармонию зубного ряда.</p>
+          </article>
+          <article class="case-card">
+            <strong>Комплексный подход</strong>
+            <p>Терапия, хирургия и ортопедия работают вместе, когда нужен устойчивый итоговый результат.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section section-soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Отзывы</span>
+          <h2>Что пациенты отмечают чаще всего после лечения</h2>
+          <p>Для нас важны не только клинические результаты, но и то, насколько спокойно, понятно и комфортно проходит весь путь лечения.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card reveal">
+            <div class="rating" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>«Очень спокойно объяснили план лечения, ничего не навязывали и подробно показали этапы. Визуально и по ощущениям результат превзошёл ожидания.»</p>
+            <strong>Пациентка, эстетическая реставрация</strong>
+          </article>
+          <article class="review-card reveal">
+            <div class="rating" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>«Отдельно понравилось, что всё организовано без суеты: запись, приём, лечение и документы. Чувствуется профессиональный подход и уважение к пациенту.»</p>
+            <strong>Пациент, ортопедическое лечение</strong>
+          </article>
+          <article class="review-card reveal">
+            <div class="rating" aria-label="Рейтинг 5 из 5">★★★★★</div>
+            <p>«Лечение прошло комфортно, а объяснения были действительно понятными. После консультации стало ясно, что и зачем делаем дальше.»</p>
+            <strong>Пациентка, терапевтический приём</strong>
+          </article>
+        </div>
+
+        <div class="media-strip reveal">
+          <a class="media-card" href="#appointment">
+            <strong>Видеоотзывы</strong>
+            <span>Показываем по согласованию с пациентами и на консультации</span>
+          </a>
+          <a class="media-card" href="https://wa.me/79086141323" target="_blank" rel="noopener noreferrer">
+            <strong>Отзывы в мессенджерах</strong>
+            <span>Запросить примеры общения и сопровождения в WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="prices" class="section">
+      <div class="container price-shell">
+        <div class="section-head reveal">
+          <span class="eyebrow">Цены</span>
+          <h2>Прейскурант с быстрым поиском по услугам</h2>
+          <p>Собрали актуальные направления и категории. Для удобства можно искать по коду, названию услуги, единице измерения и стоимости.</p>
+        </div>
+
+        <div class="price-toolbar reveal">
+          <label class="price-search-box" for="priceSearch">
+            <span>Поиск по прайс-листу</span>
+            <input id="priceSearch" type="search" placeholder="Например: имплантация, коронка, Т-21, 2500">
+          </label>
+          <div class="price-toolbar-links">
+            <a href="./documents/ПРАЙС терапия.docx" download>Терапия</a>
+            <a href="./documents/ПРАЙС с кодами ОРТОПЕДИЯ.doc" download>Ортопедия</a>
+            <a href="./documents/Прайс раздел ХИРУРГИЯ.docx" download>Хирургия</a>
+            <a href="./documents/Прайс сКодами ОРТОДОНТИЯ.docx" download>Ортодонтия</a>
+          </div>
+        </div>
+
+        <p id="priceSearchEmpty" class="price-empty" hidden>По вашему запросу услуги не найдены. Попробуйте изменить формулировку поиска.</p>
+
+        <div class="price-accordion">
+          <details class="price-details reveal" open>
+            <summary>Стоматология терапевтическая</summary>
+            <div class="price-table-wrap">
+              <table class="price-table">
+                <thead>
+                  <tr>
+                    <th>Код услуги</th>
+                    <th>№</th>
+                    <th>Наименование услуги</th>
+                    <th>Ед. изм.</th>
+                    <th>Цена, руб.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>В01.065.001</td><td>Т-1</td><td>Прием (осмотр, консультация) врача-стоматолога-терапевта первичная</td><td>1 пос.</td><td>500</td></tr>
+                  <tr><td>В.01.065.002</td><td>Т-2</td><td>Прием (осмотр, консультация) врача-стоматолога-терапевта повторный</td><td>1 пос.</td><td>200</td></tr>
+                  <tr><td>В01.066.001</td><td>Т-3</td><td>Прием (осмотр, консультация) врача-стоматолога-ортопеда первичная</td><td>1 пос.</td><td>500</td></tr>
+                  <tr><td>В01.066.002</td><td>Т-4</td><td>Прием (осмотр, консультация) врача-стоматолога-ортопеда повторный</td><td>1 пос.</td><td>150</td></tr>
+                  <tr><td>В01.067.001</td><td>Т-5</td><td>Прием (осмотр, консультация) врача-стоматолога-хирурга первичная</td><td>1 пос.</td><td>500</td></tr>
+                  <tr><td>В01.067.002</td><td>Т-6</td><td>Прием (осмотр, консультация) врача-стоматолога-терапевта повторный</td><td>1 пос.</td><td>150</td></tr>
+                  <tr><td>В04.065.006</td><td>Т-6 (1)</td><td>Профилактический прием (осмотр, выдача справки)</td><td>1 пос.</td><td>300</td></tr>
+                  <tr class="price-group-row"><td colspan="5">Рентгенология</td></tr>
+                  <tr><td>А06.07.003</td><td>Т-7</td><td>Прицельная внутриротовая контактная рентгенография</td><td>1 зуб</td><td>300</td></tr>
+                  <tr class="price-group-row"><td colspan="5">Анестезия, инъекции, наркоз</td></tr>
+                  <tr><td>В01.003.004.002</td><td>Т-8</td><td>Проводниковая анестезия</td><td>1 шт.</td><td>600</td></tr>
+                  <tr><td>В01.003.004.004</td><td>Т-9</td><td>Аппликационная анестезия</td><td>1 шт.</td><td>100</td></tr>
+                  <tr><td>В01.003.004.005</td><td>Т-10</td><td>Инфильтрационная анестезия</td><td>1 шт.</td><td>500</td></tr>
+                  <tr class="price-group-row"><td colspan="5">Профилактика</td></tr>
+                  <tr><td>А11.07.022</td><td>Т-11</td><td>Аппликация лекарственного препарата на слизистую оболочку полости рта</td><td>1 пос.</td><td>100</td></tr>
+                  <tr><td>А11.07.07.014</td><td>Т-12</td><td>Местное применение реминерализующих препаратов в области зуба</td><td>1 зуб</td><td>150</td></tr>
+                  <tr><td>А11.07.012</td><td>Т-13</td><td>Глубокое фторирование эмали зуба</td><td>1 зуб</td><td>200</td></tr>
+                  <tr><td>А22.07.002</td><td>Т-14</td><td>Ультразвуковое удаление наддесневых и поддесневых зубных отложений в области зуба</td><td>2 челюсти</td><td>3500</td></tr>
+                  <tr><td>А16.07.057</td><td>Т-15</td><td>Запечатывание фиссуры зуба герметиком</td><td>1 зуб</td><td>1000</td></tr>
+                  <tr class="price-group-row"><td colspan="5">Терапевтические услуги</td></tr>
+                  <tr><td>А16.07.082</td><td>Т-16</td><td>Лечение кариеса</td><td>1 зуб</td><td>1400</td></tr>
+                  <tr><td>—</td><td>Т-16(1)</td><td>Лечение глубокого кариеса</td><td>1 зуб</td><td>2000</td></tr>
+                  <tr><td>А16.07.008</td><td>Т-17</td><td>Эндодонтическое лечение одного канала</td><td>1 зуб</td><td>2000</td></tr>
+                  <tr><td>А16.07.008/01</td><td>Т-18</td><td>Эндодонтическое лечение двух каналов</td><td>1 зуб</td><td>2200</td></tr>
+                  <tr><td>А16.07.008/02</td><td>Т-19</td><td>Эндодонтическое лечение трех каналов</td><td>1 зуб</td><td>2500</td></tr>
+                  <tr><td>А16.07.008/03</td><td>Т-20</td><td>Эндодонтическое лечение одного канала повышенной сложности</td><td>1 зуб</td><td>2100</td></tr>
+                  <tr><td>А16.07.008/04</td><td>Т-21</td><td>Эндодонтическое лечение двух каналов повышенной сложности</td><td>1 зуб</td><td>2400</td></tr>
+                  <tr><td>А16.07.008/05</td><td>Т-22</td><td>Эндодонтическое лечение трех каналов повышенной сложности</td><td>1 зуб</td><td>2700</td></tr>
+                  <tr><td>А16.07.083.001</td><td>Т-24</td><td>Пломбирование каналов временной пастой типа Каласепт/Метапекс</td><td>1 зуб</td><td>700</td></tr>
+                  <tr><td>А16.07.008/06</td><td>Т-25</td><td>Пломбировочный материал для каналов «Гуттасилер»</td><td>1 зуб</td><td>400</td></tr>
+                  <tr><td>А16.07.008/07</td><td>Т-26</td><td>Пломбировочный материал для каналов «Гранулотек»</td><td>1 зуб</td><td>1000</td></tr>
+                  <tr><td>А16.07.008/08</td><td>Т-27</td><td>Пломбировочный материал для каналов «Пульподент»</td><td>1 зуб</td><td>500</td></tr>
+                  <tr><td>А16.07.008/09</td><td>Т-28</td><td>Установка термафила в одном канале</td><td>1 канал</td><td>600</td></tr>
+                  <tr><td>А16.07.008/002</td><td>Т-29</td><td>Установка гуттаперчевого штифта в одном канале</td><td>1 канал</td><td>700</td></tr>
+                  <tr><td>А11.07.010</td><td>Т-30</td><td>Наложение мышьяковистой пасты</td><td>1 зуб</td><td>300</td></tr>
+                  <tr><td>А16.07.098</td><td>Т-31</td><td>Снятие пломбы</td><td>1 зуб</td><td>200</td></tr>
+                  <tr><td>А16.07.025</td><td>Т-32</td><td>Избирательное полирование зуба</td><td>1 зуб</td><td>100</td></tr>
+                  <tr><td>А16.07.031</td><td>Т-33</td><td>Восстановление зуба пломбировочным материалом с использованием анкерных штифтов</td><td>1 зуб</td><td>500</td></tr>
+                  <tr><td>А16.07.092</td><td>Т-34</td><td>Трепанация зуба, искусственной коронки</td><td>1 зуб</td><td>500</td></tr>
+                  <tr><td>А16.07.002.022</td><td>Т-35</td><td>Полировка пломбы из композита при лечении кариозных полостей по Блеку</td><td>1 зуб</td><td>300</td></tr>
+                  <tr><td>А16.07.010.001</td><td>Т-36</td><td>Оказание помощи при острой зубной боли</td><td>1 зуб</td><td>500</td></tr>
+                  <tr><td>А22.07.002</td><td>Т-37</td><td>Ультразвуковое удаление наддесневых и поддесневых зубных отложений</td><td>1 зуб</td><td>150</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details class="price-details reveal">
+            <summary>Стоматология ортопедическая</summary>
+            <div class="price-table-wrap">
+              <table class="price-table">
+                <thead>
+                  <tr>
+                    <th>Код услуги</th>
+                    <th>№</th>
+                    <th>Наименование услуги</th>
+                    <th>Ед. изм.</th>
+                    <th>Цена, руб.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>А16.07.004/01</td><td>Орт-001</td><td>Временная коронка (непрямой метод)</td><td>1 зуб</td><td>1500</td></tr>
+                  <tr><td>А16.07.004/02</td><td>Орт-002</td><td>Временная коронка (PMMA)</td><td>1 зуб</td><td>2500</td></tr>
+                  <tr><td>А16.07.004/03</td><td>Орт-003</td><td>Коронка металлическая цельнолитая</td><td>1 зуб</td><td>5000</td></tr>
+                  <tr><td>А16.07.004/04</td><td>Орт-004</td><td>Коронка металлокерамическая</td><td>1 зуб</td><td>9000</td></tr>
+                  <tr><td>А16.07.004/05</td><td>Орт-005</td><td>Коронка из диоксида циркония</td><td>1 зуб</td><td>15000</td></tr>
+                  <tr><td>А16.07.004/06</td><td>Орт-006</td><td>Коронка стальная штампованная без напыления</td><td>1 зуб</td><td>3000</td></tr>
+                  <tr><td>А16.07.004/07</td><td>Орт-007</td><td>Коронка цельнолитая с пластмассовой облицовкой</td><td>1 зуб</td><td>5000</td></tr>
+                  <tr><td>А16.07.004/08</td><td>Орт-008</td><td>Коронка штампованная с облицовкой</td><td>1 зуб</td><td>3500</td></tr>
+                  <tr><td>А16.07.004/09</td><td>Орт-009</td><td>Коронка стальная штампованная с напылением</td><td>1 зуб</td><td>3000</td></tr>
+                  <tr><td>А16.07.004/10</td><td>Орт-010</td><td>Фасетка пластмассовая</td><td>1 зуб</td><td>3000</td></tr>
+                  <tr><td>А16.07.004/11</td><td>Орт-011</td><td>Разрез коронок (пластмассовой/штампованной)</td><td>1 зуб</td><td>300</td></tr>
+                  <tr><td>А16.07.004/12</td><td>Орт-012</td><td>Разрез коронок (цельнолитой/металлокерамической)</td><td>1 зуб</td><td>500</td></tr>
+                  <tr><td>А16.07.004/13</td><td>Орт-013</td><td>Изготовление зуба литого</td><td>1 зуб</td><td>3000</td></tr>
+                  <tr><td>А16.07.004/15</td><td>Орт-015</td><td>Коронка цельнолитая с керамической облицовкой</td><td>1 зуб</td><td>5000</td></tr>
+                  <tr><td>А16.07.004/16</td><td>Орт-016</td><td>Коронка металлокерамическая на имплантат (цементная фиксация)</td><td>1 зуб</td><td>20000</td></tr>
+                  <tr><td>А.16.07.006</td><td>Орт-017</td><td>Коронка из диоксида циркония на имплантат (винтовая фиксация)</td><td>1 зуб</td><td>25000</td></tr>
+                  <tr class="price-group-row"><td colspan="5">Съемные и бюгельные конструкции</td></tr>
+                  <tr><td>А16.07.035/01</td><td>Орт-025</td><td>Частичный съемный пластиночный протез из акрила</td><td>1 челюсть</td><td>15000</td></tr>
+                  <tr><td>А16.07.035/05</td><td>Орт-029</td><td>Микропротез (иммедиат-протез)</td><td>1 шт.</td><td>4000</td></tr>
+                  <tr><td>А16.07.036.001</td><td>Орт-043</td><td>Бюгельный протез металлический на кламмерной фиксации</td><td>1 челюсть</td><td>25000</td></tr>
+                  <tr><td>А16.07.036.002</td><td>Орт-044</td><td>Бюгельный протез на аттачменах (микрозамках)</td><td>1 челюсть</td><td>45000</td></tr>
+                  <tr><td>А16.07.036.003</td><td>Орт-045</td><td>Бюгельный протез на телескопических коронках</td><td>1 челюсть</td><td>70000</td></tr>
+                  <tr><td>А16.07.035.4015</td><td>Орт-053</td><td>Акриловый протез, система All-on-4</td><td>1 ед.</td><td>150000</td></tr>
+                  <tr><td>A16.07.056.014</td><td>Орт-054</td><td>Акриловый протез, система All-on-6</td><td>1 ед.</td><td>170000</td></tr>
+                  <tr><td>А16.07.006.15</td><td>Орт-055</td><td>Диоксид циркония на титановой балке, на 4</td><td>1 ед.</td><td>200000</td></tr>
+                  <tr><td>А16.07.006.18</td><td>Орт-056</td><td>Диоксид циркония на титановой балке, на 6</td><td>1 ед.</td><td>250000</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details class="price-details reveal">
+            <summary>Хирургический прием</summary>
+            <div class="price-table-wrap">
+              <table class="price-table">
+                <thead>
+                  <tr>
+                    <th>Код услуги</th>
+                    <th>№</th>
+                    <th>Наименование услуги</th>
+                    <th>Ед. изм.</th>
+                    <th>Цена, руб.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>А16.07.001.001</td><td>Хр.01</td><td>Удаление постоянного зуба (части зуба)</td><td>1 зуб</td><td>800</td></tr>
+                  <tr><td>А16.07.001.002</td><td>Хр.02</td><td>Удаление постоянного зуба</td><td>1 зуб</td><td>1500</td></tr>
+                  <tr><td>А16.07.054</td><td>Хр.03</td><td>Внутрикостная дентальная имплантация «ANYONE» (Корея)</td><td>1 ед.</td><td>30000</td></tr>
+                  <tr><td>А16.07.054.009</td><td>Хр.04</td><td>Установка формирователя десны</td><td>1 ед.</td><td>2500</td></tr>
+                  <tr><td>А16.07.097.002</td><td>Хр.05</td><td>Наложение швов</td><td>1 ед.</td><td>500</td></tr>
+                  <tr><td>А16.07.055</td><td>Хр.06</td><td>Синус-лифтинг закрытый (костная пластика, остеопластика)</td><td>1 ед.</td><td>20000</td></tr>
+                  <tr><td>А16.07.055</td><td>Хр.07</td><td>Синус-лифтинг открытый (костная пластика, остеопластика)</td><td>1 ед.</td><td>80000</td></tr>
+                  <tr><td>A16.07.044.003</td><td>Хр.08</td><td>Пластика десны</td><td>1 ед.</td><td>10000</td></tr>
+                  <tr><td>A16.07.006.007</td><td>Хр.09</td><td>Установка мультиюнита</td><td>1 ед.</td><td>6500</td></tr>
+                  <tr><td>A16.07.054.030</td><td>Хр.10</td><td>Внутрикостная дентальная имплантация по концепции «Все на 4»</td><td>1 ед.</td><td>150000</td></tr>
+                  <tr><td>A16.07.054.031</td><td>Хр.11</td><td>Внутрикостная дентальная имплантация по концепции «Все на 6»</td><td>1 ед.</td><td>220000</td></tr>
+                  <tr><td>А16.07.017.011</td><td>Хр.12</td><td>Костная аугментация</td><td>1 ед.</td><td>20000</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details class="price-details reveal">
+            <summary>Ортодонтия</summary>
+            <div class="price-table-wrap">
+              <table class="price-table">
+                <thead>
+                  <tr>
+                    <th>Код услуги</th>
+                    <th>№</th>
+                    <th>Наименование услуги</th>
+                    <th>Ед. изм.</th>
+                    <th>Цена, руб.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>В01.063.001</td><td>Орд-01</td><td>Консультация врача-ортодонта</td><td>—</td><td>900</td></tr>
+                  <tr><td>—</td><td>Орд-02</td><td>Установка брекет-системы</td><td>2 челюсти</td><td>75000</td></tr>
+                  <tr><td>А23.07.001</td><td>Орд-03</td><td>Снятие брекет-системы с чисткой</td><td>2 челюсти</td><td>4000</td></tr>
+                  <tr><td>А16.07.048.001</td><td>Орд-04</td><td>Установка металлической лигатуры</td><td>1 ед.</td><td>250</td></tr>
+                  <tr><td>А16.07.028.006</td><td>Орд-05</td><td>Установка ретейнера</td><td>1 ед.</td><td>3500</td></tr>
+                  <tr><td>А23.07.001.014</td><td>Орд-06</td><td>Установка эластичной цепочки</td><td>1 ед.</td><td>450</td></tr>
+                  <tr><td>А23.07.001.022</td><td>Орд-07</td><td>Вторичная фиксация брекета</td><td>1 ед.</td><td>1200</td></tr>
+                  <tr><td>А23.07.001.017</td><td>Орд-08</td><td>Фиксация кнопки</td><td>1 ед.</td><td>800</td></tr>
+                  <tr><td>А16.07.028</td><td>Орд-09</td><td>Установка расправляющей пружины</td><td>1 ед.</td><td>400</td></tr>
+                  <tr><td>А23.07.001.006</td><td>Орд-10</td><td>Замена дуги (TMA)</td><td>1 ед.</td><td>3500</td></tr>
+                  <tr><td>А23.07.001.005</td><td>Орд-11</td><td>Замена дуги (CuNiTi)</td><td>1 ед.</td><td>1750</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section-soft">
+      <div class="container faq-grid">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Частые вопросы перед первым визитом</h2>
+          <p>Собрали вопросы, которые чаще всего возникают до записи, консультации и начала лечения.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>Можно ли прийти на консультацию и получить понятный план лечения?</summary>
+            <p>Да. На консультации врач собирает жалобы, проводит осмотр, объясняет клиническую ситуацию и обсуждает возможные этапы лечения.</p>
+          </details>
+          <details>
+            <summary>Вы занимаетесь и лечением, и ортопедией, и хирургией?</summary>
+            <p>Да. В клинике ведутся терапевтический, ортопедический, хирургический и ортодонтический приём, что удобно для комплексного подхода.</p>
+          </details>
+          <details>
+            <summary>Можно ли заранее уточнить стоимость услуг?</summary>
+            <p>Да. На сайте доступен прейскурант, а окончательная стоимость зависит от клинической ситуации и объёма лечения.</p>
+          </details>
+          <details>
+            <summary>Есть ли документы для пациента и правовая информация?</summary>
+            <p>Да. На сайте размещены лицензия, сведения о врачах, документы для пациентов, информация о контролирующих органах и политика обработки персональных данных.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="patient" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Пациенту</span>
+          <h2>Прозрачные правила, понятные документы и спокойная коммуникация</h2>
+          <p>Мы стараемся делать лечение не только качественным, но и организационно понятным: без скрытых условий, перегруженных формулировок и лишней бюрократии.</p>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card reveal">
+            <h3>Права и обязанности пациента</h3>
+            <p>Пациент имеет право на получение полной информации о состоянии здоровья, стоимости услуг, методах лечения и альтернативных вариантах. Также пациенту важно соблюдать назначения врача и правила внутреннего распорядка клиники.</p>
+            <a href="./documents/приказ о предост мед услуг Радмар.PDF" download>Положение о платных медицинских услугах</a>
+          </article>
+          <article class="info-card reveal">
+            <h3>Запись и подготовка</h3>
+            <p>Записаться можно по телефону, через WhatsApp или через форму ниже. Рекомендуем приходить за 10–15 минут до приёма. Если нужна специальная подготовка, администратор или врач предупреждают об этом заранее.</p>
+            <a href="#appointment">Перейти к форме записи</a>
+          </article>
+          <article class="info-card reveal" id="contract">
+            <h3>Договор и оплата</h3>
+            <p>Все условия оказания платных услуг, этапы лечения, стоимость и иные существенные условия обсуждаются до начала лечения и фиксируются в документах клиники.</p>
+            <a href="./documents/приказ о предост мед услуг Радмар.PDF" download>Скачать положение и формы документов</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs" class="section section-soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Документы</span>
+          <h2>Юридическая и организационная информация в одном разделе</h2>
+          <p>Ниже размещены основные документы клиники, сведения о врачах и материалы, которые могут понадобиться пациенту до визита.</p>
+        </div>
+
+        <div class="docs-grid">
+          <a class="doc-card reveal" href="./documents/Приказ о порядке приема и рассмотрения обращений граждан ООО Радмар.PDF" download>
+            <strong>Порядок рассмотрения обращений</strong>
+            <span>PDF</span>
+          </a>
+          <a class="doc-card reveal" href="./documents/приказ о предост мед услуг Радмар.PDF" download>
+            <strong>Платные медицинские услуги</strong>
+            <span>PDF</span>
+          </a>
+          <a class="doc-card reveal" href="./documents/О  Врачах.docx" download>
+            <strong>Сведения о врачах</strong>
+            <span>DOCX</span>
+          </a>
+          <a class="doc-card reveal" href="./documents/Реквизиты ООО Радмар.docx" download>
+            <strong>Реквизиты организации</strong>
+            <span>DOCX</span>
+          </a>
+          <a class="doc-card reveal" href="./documents/Контакты Радмар.docx" download>
+            <strong>Контакты клиники</strong>
+            <span>DOCX</span>
+          </a>
+          <a class="doc-card reveal" href="./documents/Сведения о контролирующих организациях.docx" download>
+            <strong>Контролирующие организации</strong>
+            <span>DOCX</span>
+          </a>
+          <a class="doc-card reveal" href="./documents/programma_gos_garantiy.pdf" download>
+            <strong>Программа государственных гарантий</strong>
+            <span>PDF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="vacancies" class="section">
+      <div class="container">
+        <div class="vacancy-card reveal">
+          <span class="eyebrow">Вакансии</span>
+          <h2>На текущий момент открытых вакансий нет</h2>
+          <p>Если в клинике появятся новые позиции, мы опубликуем их в этом разделе. Вы также можете связаться с администратором и оставить краткую информацию о себе.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section section-soft">
+      <div class="container contacts-grid">
+        <div class="contacts-copy reveal">
+          <span class="eyebrow">Контакты</span>
+          <h2>Свяжитесь с клиникой удобным способом</h2>
+          <p>Мы находимся в селе Карагали и сопровождаем пациентов от первой консультации до завершения лечения. Для записи используйте телефон, WhatsApp или форму заявки.</p>
+
+          <div class="contact-cards">
+            <article class="contact-card">
+              <strong>Телефон</strong>
+              <a href="tel:+79086141323">+7 (908) 614-13-23</a>
+            </article>
+            <article class="contact-card">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/79086141323" target="_blank" rel="noopener noreferrer">Написать в WhatsApp</a>
+            </article>
+            <article class="contact-card">
+              <strong>Telegram</strong>
+              <a href="tg://resolve?phone=79021142976">Связаться в Telegram</a>
+            </article>
+            <article class="contact-card">
+              <strong>E-mail</strong>
+              <a href="mailto:rad-mar@bk.ru">rad-mar@bk.ru</a>
+            </article>
+          </div>
+
+          <div class="schedule-card">
+            <strong>Режим работы</strong>
+            <span>Пн–Пт: 09:00–20:00</span>
+            <span>Сб: 09:00–17:00</span>
+            <span>Вс: выходной</span>
+          </div>
+
+          <div class="regulators">
+            <h3>Контролирующие органы</h3>
+            <ul>
+              <li>Министерство здравоохранения Астраханской области: 414056, г. Астрахань, ул. Татищева, 16В, (8512) 54-16-19, minzdrav@astrobl.ru</li>
+              <li>Территориальный орган Росздравнадзора по Астраханской области: 414000, г. Астрахань, ул. Коммунистическая, 27, (8512) 220-120</li>
+              <li>Управление Роспотребнадзора по Астраханской области: 414057, г. Астрахань, ул. Николая Островского, 138, (8512) 50-14-10</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contacts-side reveal">
+          <div class="map-card">
+            <iframe
+              title="Карта расположения стоматологии Радмар"
+              src="https://www.google.com/maps?q=%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,%20%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D0%BB%D0%B8,%20%D1%83%D0%BB.%20%D0%9F%D0%B0%D1%80%D0%BE%D0%BC%D0%BD%D0%B0%D1%8F,%205&z=15&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div id="appointment" class="appointment-card">
+            <span class="eyebrow">Онлайн-запись</span>
+            <h3>Оставьте заявку, и мы свяжемся с вами</h3>
+            <form id="appointmentForm" class="appointment-form">
+              <label>
+                <span>Имя</span>
+                <input type="text" name="name" placeholder="Как к вам обращаться" required>
+              </label>
+              <label>
+                <span>Телефон</span>
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+              </label>
+              <label>
+                <span>Направление</span>
+                <select name="service">
+                  <option>Консультация</option>
+                  <option>Лечение зубов</option>
+                  <option>Ортопедия</option>
+                  <option>Хирургия</option>
+                  <option>Ортодонтия</option>
+                  <option>Эстетика улыбки</option>
+                </select>
+              </label>
+              <label>
+                <span>Комментарий</span>
+                <textarea name="message" rows="4" placeholder="Коротко опишите запрос или удобное время для связи"></textarea>
+              </label>
+              <div class="appointment-actions">
+                <button class="primary-button" type="submit">Отправить заявку</button>
+                <button class="secondary-button" type="button" id="whatsAppBooking">Написать в WhatsApp</button>
               </div>
-            </div>
-            <p class="muted" style="margin-top:16px">Программа государственных гарантий Астраханской области на 2026 год — <a href="./documents/programma_gos_garantiy.pdf" download>скачать (PDF)</a></p>
+              <p id="appointmentStatus" class="appointment-status" aria-live="polite"></p>
+            </form>
           </div>
-          <div class="hero-image">
-            <img src="./images/main.jpg" alt="Главное фото клиники" class="main-photo">
-          </div>
-          </div>
-        <p class="disclaimer">Имеются противопоказания, необходима консультация специалиста. Реклама медицинских услуг размещена с указанием номера лицензии.</p>
-      </div>
-    </section>
-
-
-    <section id="doctors">
-      <h2>Врачи</h2>
-      <div class="doctors-grid">
-        <!-- Курбанов Ризабек Хайдарович -->
-        <div class="doctor-card" data-doctor="kurbanov-rizabek">
-          <div class="doctor-header">
-            <h3>Курбанов Ризабек Хайдарович</h3>
-            <p class="muted">врач высшей категории · стоматолог‑ортопед</p>
-          </div>
-          <div class="doctor-image">
-            <img src="images/Курбанов Ризабек.JPG" alt="Курбанов Ризабек Хайдарович">
-          </div>
-          <div class="doctor-details">
-            <div class="doctor-info">
-              <h4>Образование</h4>
-              <p>В 1992 г окончил Ставропольский государственный медицинский институт по специальности – Стоматология</p>
-              <h4>Стаж работы</h4>
-              <p>33 года, с 1992 г</p>
-              <h4>Специализация</h4>
-              <p>Врач-стоматолог-ортопед высшей категории</p>
-              <h4>Сведения об аккредитации специалиста</h4>
-              <p>Текст об аккредитации будет добавлен позже.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Курбанов Радик Ризабекович -->
-        <div class="doctor-card" data-doctor="kurbanov-radik">
-          <div class="doctor-header">
-            <h3>Курбанов Радик Ризабекович</h3>
-            <p class="muted">стоматолог‑ортопед</p>
-          </div>
-          <div class="doctor-image">
-            <img src="images/Курбанов Радик.JPG" alt="Курбанов Радик Ризабекович">
-          </div>
-          <div class="doctor-details">
-            <div class="doctor-info">
-              <h4>Образование</h4>
-              <p>В 2015 г окончил Астраханский государственный медицинский университет по специальности – Стоматология</p>
-              <h4>Стаж работы</h4>
-              <p>с 2017 г</p>
-              <h4>Специализация</h4>
-              <p>Врач-стоматолог-ортопед</p>
-              <h4>Сведения об аккредитации специалиста</h4>
-              <p>Текст об аккредитации будет добавлен позже.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Курбанов Марсель Ризабекович -->
-        <div class="doctor-card" data-doctor="kurbanov-marsel">
-          <div class="doctor-header">
-            <h3>Курбанов Марсель Ризабекович</h3>
-            <p class="muted">стоматолог‑ортопед</p>
-          </div>
-          <div class="doctor-image">
-            <img src="images/Курбанов Марсель.JPG" alt="Курбанов Марсель Ризабекович">
-          </div>
-          <div class="doctor-details">
-            <div class="doctor-info">
-              <h4>Образование</h4>
-              <p>В 2020 г окончил Астраханскую государственную медицинскую академию по специальности – Стоматология</p>
-              <h4>Стаж работы</h4>
-              <p>с 2021 г</p>
-              <h4>Специализация</h4>
-              <p>Врач-стоматолог-ортопед</p>
-              <h4>Сведения об аккредитации специалиста</h4>
-              <p>Текст об аккредитации будет добавлен позже.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Алиев Муслим Махмудович -->
-        <div class="doctor-card" data-doctor="aliev-muslim">
-          <div class="doctor-header">
-            <h3>Алиев Муслим Махмудович</h3>
-            <p class="muted">стоматолог-терапевт</p>
-          </div>
-          <div class="doctor-image">
-            <img src="images/Алиев Муслим.JPG" alt="Алиев Муслим Махмудович">
-          </div>
-          <div class="doctor-details">
-            <div class="doctor-info">
-              <h4>Образование</h4>
-              <p>В 2019 г окончил Пензенский государственный университет по специальности- Стоматология</p>
-              <h4>Стаж работы</h4>
-              <p>с 2020 г</p>
-              <h4>Специализация</h4>
-              <p>Врач-стоматолог</p>
-              <h4>Сведения об аккредитации специалиста</h4>
-              <p>Текст об аккредитации будет добавлен позже.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Джалмухамбетов Ерлан Гимранович -->
-        <div class="doctor-card" data-doctor="dzhalmukhambetov-erlan">
-          <div class="doctor-header">
-            <h3>Джалмухамбетов Ерлан Гимранович</h3>
-            <p class="muted">стоматолог‑терапевт</p>
-          </div>
-          <div class="doctor-image">
-            <img src="images/Джалмухамбетов Ерлан.JPG" alt="Джалмухамбетов Ерлан Гимранович">
-          </div>
-          <div class="doctor-details">
-            <div class="doctor-info">
-              <h4>Образование</h4>
-              <p>В 2020 г окончил Астраханскую государственную медицинскую академию по специальности – Стоматология</p>
-              <h4>Стаж работы</h4>
-              <p>с 2021 г</p>
-              <h4>Специализация</h4>
-              <p>Врач-стоматолог-терапевт</p>
-              <h4>Сведения об аккредитации специалиста</h4>
-              <p>Текст об аккредитации будет добавлен позже.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="muted" style="margin-top:16px">Подробная информация о врачах — <a href="./documents/О  Врачах.docx" download>скачать (DOCX)</a></p>
-    </section>
-
-    <section id="services" class="price-list">
-      <h2>Прейскурант стоматологических услуг</h2>
-      <div class="price-search">
-        <label class="price-search-label" for="priceSearch">Поиск по прайс-листу</label>
-        <input id="priceSearch" type="search" placeholder="Код, номер, название услуги или цена" aria-label="Поиск по прейскуранту стоматологических услуг">
-      </div>
-      <p id="priceSearchEmpty" class="muted price-search-empty" hidden>По вашему запросу ничего не найдено.</p>
-
-      <div class="price-section">
-        <h3>Стоматология терапевтическая</h3>
-        <div class="price-table-wrap">
-          <table class="price-table">
-            <thead>
-              <tr>
-                <th>Код услуги</th>
-                <th>№</th>
-                <th>Наименование услуги</th>
-                <th>Ед. изм.</th>
-                <th>Цена, руб.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>В01.065.001</td><td>Т-1</td><td>Прием (осмотр, консультация) врача-стоматолога-терапевта первичная</td><td>1 пос.</td><td>500</td></tr>
-              <tr><td>В.01.065.002</td><td>Т-2</td><td>Прием (осмотр, консультация) врача-стоматолога-терапевта повторный</td><td>1 пос.</td><td>200</td></tr>
-              <tr><td>В01.066.001</td><td>Т-3</td><td>Прием (осмотр, консультация) врача-стоматолога-ортопеда первичная</td><td>1 пос.</td><td>500</td></tr>
-              <tr><td>В01.066.002</td><td>Т-4</td><td>Прием (осмотр, консультация) врача-стоматолога-ортопеда повторный</td><td>1 пос.</td><td>150</td></tr>
-              <tr><td>В01.067.001</td><td>Т-5</td><td>Прием (осмотр, консультация) врача-стоматолога-хирурга первичная</td><td>1 пос.</td><td>500</td></tr>
-              <tr><td>В01.067.002</td><td>Т-6</td><td>Прием (осмотр, консультация) врача-стоматолога-терапевта повторный</td><td>1 пос.</td><td>150</td></tr>
-              <tr><td>В04.065.006</td><td>Т-6 (1)</td><td>Профилактический прием (осмотр, выдача справки)</td><td>1 пос.</td><td>300</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Рентгенология</strong></td></tr>
-              <tr><td>А06.07.003</td><td>Т-7</td><td>Прицельная внутриротовая контактная рентгенография</td><td>1 зуб</td><td>300</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Анестезия, инъекции, наркоз</strong></td></tr>
-              <tr><td>В01.003.004.002</td><td>Т-8</td><td>Проводниковая анестезия</td><td>1 шт.</td><td>600</td></tr>
-              <tr><td>В01.003.004.004</td><td>Т-9</td><td>Аппликационная анестезия</td><td>1 шт.</td><td>100</td></tr>
-              <tr><td>В01.003.004.005</td><td>Т-10</td><td>Инфильтрационная анестезия</td><td>1 шт.</td><td>500</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Профилактика</strong></td></tr>
-              <tr><td>А11.07.022</td><td>Т-11</td><td>Аппликация лекарственного препарата на слизистую оболочку полости рта</td><td>1 пос.</td><td>100</td></tr>
-              <tr><td>А11.07.07.014</td><td>Т-12</td><td>Местное применение реминерализующих препаратов в области зуба</td><td>1 зуб</td><td>150</td></tr>
-              <tr><td>А11.07.012</td><td>Т-13</td><td>Глубокое фторирование эмали зуба</td><td>1 зуб</td><td>200</td></tr>
-              <tr><td>А22.07.002</td><td>Т-14</td><td>Ультразвуковое удаление наддесневых и поддесневых зубных отложений в области зуба</td><td>2 челюсти</td><td>3500</td></tr>
-              <tr><td>А16.07.057</td><td>Т-15</td><td>Запечатывание фиссуры зуба герметиком</td><td>1 зуб</td><td>1000</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Терапевтические услуги</strong></td></tr>
-              <tr><td>А16.07.082</td><td>Т-16</td><td>Лечение кариеса</td><td>1 зуб</td><td>1400</td></tr>
-              <tr><td>—</td><td>Т-16(1)</td><td>Лечение глубокого кариеса</td><td>1 зуб</td><td>2000</td></tr>
-              <tr><td>А16.07.008</td><td>Т-17</td><td>Эндодонтическое лечение одного канала</td><td>1 зуб</td><td>2000</td></tr>
-              <tr><td>А16.07.008/01</td><td>Т-18</td><td>Эндодонтическое лечение двух каналов</td><td>1 зуб</td><td>2200</td></tr>
-              <tr><td>А16.07.008/02</td><td>Т-19</td><td>Эндодонтическое лечение трех каналов</td><td>1 зуб</td><td>2500</td></tr>
-              <tr><td>А16.07.008/03</td><td>Т-20</td><td>Эндодонтическое лечение одного канала повышенной сложности</td><td>1 зуб</td><td>2100</td></tr>
-              <tr><td>А16.07.008/04</td><td>Т-21</td><td>Эндодонтическое лечение двух каналов повышенной сложности</td><td>1 зуб</td><td>2400</td></tr>
-              <tr><td>А16.07.008/05</td><td>Т-22</td><td>Эндодонтическое лечение трех каналов повышенной сложности</td><td>1 зуб</td><td>2700</td></tr>
-              <tr><td>А16.07.083.001</td><td>Т-24</td><td>Пломбирование каналов временной пастой типа Каласепт/Метапекс</td><td>1 зуб</td><td>700</td></tr>
-              <tr><td>А16.07.008/06</td><td>Т-25</td><td>Пломбировочный материал для каналов «Гуттасилер»</td><td>1 зуб</td><td>400</td></tr>
-              <tr><td>А16.07.008/07</td><td>Т-26</td><td>Пломбировочный материал для каналов «Гранулотек»</td><td>1 зуб</td><td>1000</td></tr>
-              <tr><td>А16.07.008/08</td><td>Т-27</td><td>Пломбировочный материал для каналов «Пульподент»</td><td>1 зуб</td><td>500</td></tr>
-              <tr><td>А16.07.008/09</td><td>Т-28</td><td>Установка термафила в одном канале</td><td>1 канал</td><td>600</td></tr>
-              <tr><td>А16.07.008/002</td><td>Т-29</td><td>Установка гуттаперчевого штифта в одном канале</td><td>1 канал</td><td>700</td></tr>
-              <tr><td>А11.07.010</td><td>Т-30</td><td>Наложение мышьяковистой пасты</td><td>1 зуб</td><td>300</td></tr>
-              <tr><td>А16.07.098</td><td>Т-31</td><td>Снятие пломбы</td><td>1 зуб</td><td>200</td></tr>
-              <tr><td>А16.07.025</td><td>Т-32</td><td>Избирательное полирование зуба</td><td>1 зуб</td><td>100</td></tr>
-              <tr><td>А16.07.031</td><td>Т-33</td><td>Восстановление зуба пломбировочным материалом с использованием анкерных штифтов</td><td>1 зуб</td><td>500</td></tr>
-              <tr><td>А16.07.092</td><td>Т-34</td><td>Трепанация зуба, искусственной коронки</td><td>1 зуб</td><td>500</td></tr>
-              <tr><td>А16.07.002.022</td><td>Т-35</td><td>Полировка пломбы из композита при лечении кариозных полостей по Блеку</td><td>1 зуб</td><td>300</td></tr>
-              <tr><td>А16.07.010.001</td><td>Т-36</td><td>Оказание помощи при острой зубной боли</td><td>1 зуб</td><td>500</td></tr>
-              <tr><td>А22.07.002</td><td>Т-37</td><td>Ультразвуковое удаление наддесневых и поддесневых зубных отложений</td><td>1 зуб</td><td>150</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Распломбирование корневых каналов</strong></td></tr>
-              <tr><td>А16.07.030</td><td>Т-38</td><td>Распломбирование одного канала</td><td>1 зуб</td><td>600</td></tr>
-              <tr><td>А16.07.030/01</td><td>Т-39</td><td>Распломбирование двух каналов</td><td>1 зуб</td><td>700</td></tr>
-              <tr><td>А16.07.030/02</td><td>Т-40</td><td>Распломбирование трех каналов</td><td>1 зуб</td><td>800</td></tr>
-              <tr><td>А16.07.030/03</td><td>Т-41</td><td>Извлечение фиксированного инородного тела из корневого канала</td><td>1 зуб</td><td>1000</td></tr>
-              <tr><td>А16.07.082.002</td><td>Т-42</td><td>Распломбирование одного канала повышенной сложности (резорцин-формалиновый способ)</td><td>1 зуб</td><td>1300</td></tr>
-              <tr><td>А16.07.082.001</td><td>Т-43</td><td>Распломбирование одного канала повышенной сложности (пломбированного цементом)</td><td>1 зуб</td><td>1500</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Пломбы химического отверждения</strong></td></tr>
-              <tr><td>А16.07.002</td><td>Т-44</td><td>Установка пломбы химического отверждения</td><td>1 зуб</td><td>600</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Пломбы светового отверждения</strong></td></tr>
-              <tr><td>А16.07.002.001</td><td>Т-45</td><td>Установка светоотверждаемой пломбы «EsteLait Flow»</td><td>1 зуб</td><td>300</td></tr>
-              <tr><td>А16.07.002.002</td><td>Т-46</td><td>Установка светоотверждаемой пломбы «Harmonize»</td><td>1 зуб</td><td>1700</td></tr>
-              <tr><td>А16.07.002.003</td><td>Т-47</td><td>Установка светоотверждаемой пломбы «Estelite Asterua»</td><td>1 зуб</td><td>2000</td></tr>
-              <tr><td>А16.07.002.004</td><td>Т-48</td><td>Установка светоотверждаемой пломбы «Estelite Sigma Quick»</td><td>1 зуб</td><td>2000</td></tr>
-              <tr><td>А16.07.002.005</td><td>Т-49</td><td>Установка штифта на материал «Core it»</td><td>1 зуб</td><td>200</td></tr>
-              <tr><td>А16.07.002.006</td><td>Т-50</td><td>Установка светоотверждаемой пломбы «Vitremer»</td><td>1 зуб</td><td>1100</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Прокладочные материалы</strong></td></tr>
-              <tr><td>А11.07.012.001</td><td>Т-51</td><td>Постановка стеклоиономерного прокладочного материала «Fuji 9»</td><td>1 зуб</td><td>500</td></tr>
-              <tr><td>А11.07.012.002</td><td>Т-52</td><td>Постановка стеклоиономерного прокладочного материала «Витремер», «Витрибонд»</td><td>1 зуб</td><td>600</td></tr>
-              <tr><td>А11.07.012.003</td><td>Т-53</td><td>Введение кальцийсодержащего материала «Дайкал»</td><td>1 зуб</td><td>400</td></tr>
-              <tr><td>А16.07.052</td><td>Т-54</td><td>Установка расширителя рта</td><td>1 шт.</td><td>200</td></tr>
-              <tr><td>А16.07.052.01</td><td>Т-55</td><td>Установка стекловолоконного штифта</td><td>1 шт.</td><td>1000</td></tr>
-              <tr><td>А11.07.012.004</td><td>Т-56</td><td>Наложение коффердама, руббердама</td><td>1 шт.</td><td>600</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="price-section">
-        <h3>Стоматология ортопедическая</h3>
-        <div class="price-table-wrap">
-          <table class="price-table">
-            <thead>
-              <tr>
-                <th>Код услуги</th>
-                <th>№</th>
-                <th>Наименование услуги</th>
-                <th>Ед. изм.</th>
-                <th>Цена, руб.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>А16.07.004/01</td><td>Орт-001</td><td>Временная коронка (непрямой метод)</td><td>1 зуб</td><td>1500</td></tr>
-              <tr><td>А16.07.004/02</td><td>Орт-002</td><td>Временная коронка (PMMA)</td><td>1 зуб</td><td>2500</td></tr>
-              <tr><td>А16.07.004/03</td><td>Орт-003</td><td>Коронка металлическая цельнолитая</td><td>1 зуб</td><td>5000</td></tr>
-              <tr><td>А16.07.004/04</td><td>Орт-004</td><td>Коронка металлокерамическая</td><td>1 зуб</td><td>9000</td></tr>
-              <tr><td>А16.07.004/05</td><td>Орт-005</td><td>Коронка из диоксида циркония</td><td>1 зуб</td><td>15000</td></tr>
-              <tr><td>А16.07.004/06</td><td>Орт-006</td><td>Коронка стальная штампованная без напыления</td><td>1 зуб</td><td>3000</td></tr>
-              <tr><td>А16.07.004/07</td><td>Орт-007</td><td>Коронка цельнолитая с пластмассовой облицовкой</td><td>1 зуб</td><td>5000</td></tr>
-              <tr><td>А16.07.004/08</td><td>Орт-008</td><td>Коронка штампованная с облицовкой</td><td>1 зуб</td><td>3500</td></tr>
-              <tr><td>А16.07.004/09</td><td>Орт-009</td><td>Коронка стальная штампованная с напылением</td><td>1 зуб</td><td>3000</td></tr>
-              <tr><td>А16.07.004/10</td><td>Орт-010</td><td>Фасетка пластмассовая</td><td>1 зуб</td><td>3000</td></tr>
-              <tr><td>А16.07.004/11</td><td>Орт-011</td><td>Разрез коронок (пластмассовой/штампованной)</td><td>1 зуб</td><td>300</td></tr>
-              <tr><td>А16.07.004/12</td><td>Орт-012</td><td>Разрез коронок (цельнолитой/металлокерамической)</td><td>1 зуб</td><td>500</td></tr>
-              <tr><td>А16.07.004/13</td><td>Орт-013</td><td>Изготовление зуба литого</td><td>1 зуб</td><td>3000</td></tr>
-              <tr><td>А16.07.004/14</td><td>Орт-014</td><td>Коронка из драгметалла (без учета металла)</td><td>1 зуб</td><td>3200</td></tr>
-              <tr><td>А16.07.004/15</td><td>Орт-015</td><td>Коронка цельнолитая с керамической облицовкой</td><td>1 зуб</td><td>5000</td></tr>
-              <tr><td>А16.07.004/16</td><td>Орт-016</td><td>Коронка металлокерамическая на имплантат (цементная фиксация)</td><td>1 зуб</td><td>20000</td></tr>
-              <tr><td>А.16.07.006</td><td>Орт-017</td><td>Коронка из диоксида циркония на имплантат (винтовая фиксация)</td><td>1 зуб</td><td>25000</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Фиксация на постоянный цемент</strong></td></tr>
-              <tr><td>А16.07.049/01</td><td>Орт-018</td><td>Временная фиксация коронок</td><td>1 зуб</td><td>300</td></tr>
-              <tr><td>А16.07.049/02</td><td>Орт-019</td><td>Постоянная фиксация коронок на СИЦ FUDJI +</td><td>1 зуб</td><td>800</td></tr>
-              <tr><td>А16.07.049/03</td><td>Орт-020</td><td>Постоянная фиксация коронок на СИЦ FUDJI 1</td><td>1 зуб</td><td>700</td></tr>
-              <tr><td>А16.07.049/04</td><td>Орт-021</td><td>Постоянная фиксация фосфат-цементом (Унифас)</td><td>1 зуб</td><td>300</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Восстановление зуба вкладкой</strong></td></tr>
-              <tr><td>А16.07.003/01</td><td>Орт-022</td><td>Штифтово-культевая конструкция однокорневая (прямой метод)</td><td>1 зуб</td><td>2500</td></tr>
-              <tr><td>А16.07.003/02</td><td>Орт-023</td><td>Штифтово-культевая конструкция однокорневая (лабораторный метод)</td><td>1 зуб</td><td>3200</td></tr>
-              <tr><td>А16.07.003/03</td><td>Орт-024</td><td>Штифтово-культевая конструкция двухкорневая (лабораторный метод)</td><td>1 зуб</td><td>3500</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Съемные протезы</strong></td></tr>
-              <tr><td>А16.07.035/01</td><td>Орт-025</td><td>Частичный съемный пластиночный протез из акрила</td><td>1 челюсть</td><td>15000</td></tr>
-              <tr><td>А16.07.035/02</td><td>Орт-026</td><td>Починка съемного протеза</td><td>1 шт.</td><td>2500</td></tr>
-              <tr><td>А16.07.035/03</td><td>Орт-027</td><td>Починка протеза повышенной сложности</td><td>1 шт.</td><td>3000</td></tr>
-              <tr><td>А16.07.035/04</td><td>Орт-028</td><td>Приварка зуба, кламмера (одного)</td><td>1 зуб</td><td>1600</td></tr>
-              <tr><td>А16.07.035/05</td><td>Орт-029</td><td>Микропротез (иммедиат-протез)</td><td>1 шт.</td><td>4000</td></tr>
-              <tr><td>А16.07.035/06</td><td>Орт-030</td><td>Перебазировка протеза (непрямой метод)</td><td>1 челюсть</td><td>2000</td></tr>
-              <tr><td>А16.07.035/07</td><td>Орт-031</td><td>Отливка рабочей модели</td><td>1 челюсть</td><td>500</td></tr>
-              <tr><td>А23.030.050.001</td><td>Орт-032</td><td>Коррекция ортопедической конструкции (съемного протеза)</td><td>1 челюсть</td><td>300</td></tr>
-              <tr><td>А16.07.035/08</td><td>Орт-033</td><td>Армирование съемного протеза (армирующая сетка / литая дуга)</td><td>1 челюсть</td><td>3000</td></tr>
-              <tr><td>А16.07.035/09</td><td>Орт-034</td><td>Микропротез (ацеталовый)</td><td>1 шт.</td><td>5000</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Диагностика</strong></td></tr>
-              <tr><td>А02.07.010/01</td><td>Орт-035</td><td>Изготовление диагностической модели</td><td>—</td><td>500</td></tr>
-              <tr><td>А02.07.006</td><td>Орт-036</td><td>Определение прикуса</td><td>—</td><td>200</td></tr>
-              <tr><td>А02.07.010/02</td><td>Орт-037</td><td>Получение оттиска альгинатным материалом</td><td>—</td><td>500</td></tr>
-              <tr><td>А02.07.010/03</td><td>Орт-038</td><td>Получение оттиска А-силиконом</td><td>—</td><td>1500</td></tr>
-              <tr><td>А02.07.010/04</td><td>Орт-039</td><td>Получение оттиска С-силиконом</td><td>—</td><td>800</td></tr>
-              <tr><td>А23.07.020</td><td>Орт-040</td><td>Изготовление боксерской каппы</td><td>—</td><td>6000</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Полные съемные протезы</strong></td></tr>
-              <tr><td>А.16.07.023.001</td><td>Орт-041</td><td>Полный съемный пластиночный протез из акрила</td><td>1 челюсть</td><td>20000</td></tr>
-              <tr><td>А16.07.006</td><td>Орт-042</td><td>Изготовление индивидуальной ложки</td><td>1 челюсть</td><td>1500</td></tr>
-              <tr class="price-group-row"><td colspan="5"><strong>Бюгельные протезы</strong></td></tr>
-              <tr><td>А16.07.036.001</td><td>Орт-043</td><td>Бюгельный протез металлический на кламмерной фиксации</td><td>1 челюсть</td><td>25000</td></tr>
-              <tr><td>А16.07.036.002</td><td>Орт-044</td><td>Бюгельный протез на аттачменах (микрозамках)</td><td>1 челюсть</td><td>45000</td></tr>
-              <tr><td>А16.07.036.003</td><td>Орт-045</td><td>Бюгельный протез на телескопических коронках</td><td>1 челюсть</td><td>70000</td></tr>
-              <tr><td>А16.07.036.004</td><td>Орт-046</td><td>Коронки телескопические первичные и вторичные</td><td>1 зуб</td><td>10000</td></tr>
-              <tr><td>А16.07.036.004</td><td>Орт-047</td><td>Бюгельный протез с одним МК-замком</td><td>1 челюсть</td><td>23000</td></tr>
-              <tr><td>А16.07.036.005</td><td>Орт-048</td><td>Бюгельный протез с двумя МК-замками</td><td>1 челюсть</td><td>25000</td></tr>
-              <tr><td>А16.07.036.006</td><td>Орт-049</td><td>Замена матрицы на аттачменах (микрозамках)</td><td>1 шт.</td><td>3000</td></tr>
-              <tr><td>А16.07.036.007</td><td>Орт-050</td><td>Ацеталовый бюгельный протез</td><td>1 челюсть</td><td>30000</td></tr>
-              <tr><td>А16.07.036.008</td><td>Орт-051</td><td>Изготовление накладки окклюзионной (лапки)</td><td>1 шт.</td><td>500</td></tr>
-              <tr><td>А16.07.036.019</td><td>Орт-052</td><td>Спайка деталей, 1 пайка</td><td>1 шт.</td><td>500</td></tr>
-              <tr><td>А16.07.035.4015</td><td>Орт-053</td><td>Акриловый протез, система All-on-4</td><td>1 ед.</td><td>150000</td></tr>
-              <tr><td>A16.07.056.014</td><td>Орт-054</td><td>Акриловый протез, система All-on-6</td><td>1 ед.</td><td>170000</td></tr>
-              <tr><td>А16.07.006.15</td><td>Орт-055</td><td>Диоксид циркония на титановой балке, на 4</td><td>1 ед.</td><td>200000</td></tr>
-              <tr><td>А16.07.006.18</td><td>Орт-056</td><td>Диоксид циркония на титановой балке, на 6</td><td>1 ед.</td><td>250000</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="price-section">
-        <h3>Хирургический прием</h3>
-        <div class="price-table-wrap">
-          <table class="price-table">
-            <thead>
-              <tr>
-                <th>Код услуги</th>
-                <th>№</th>
-                <th>Наименование услуги</th>
-                <th>Ед. изм.</th>
-                <th>Цена, руб.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>А16.07.001.001</td><td>Хр.01</td><td>Удаление постоянного зуба (части зуба)</td><td>1 зуб</td><td>800</td></tr>
-              <tr><td>А16.07.001.002</td><td>Хр.02</td><td>Удаление постоянного зуба</td><td>1 зуб</td><td>1500</td></tr>
-              <tr><td>А16.07.054</td><td>Хр.03</td><td>Внутрикостная дентальная имплантация «ANYONE» (Корея)</td><td>1 ед.</td><td>30000</td></tr>
-              <tr><td>А16.07.054.009</td><td>Хр.04</td><td>Установка формирователя десны</td><td>1 ед.</td><td>2500</td></tr>
-              <tr><td>А16.07.097.002</td><td>Хр.05</td><td>Наложение швов</td><td>1 ед.</td><td>500</td></tr>
-              <tr><td>А16.07.055</td><td>Хр.06</td><td>Синус-лифтинг закрытый (костная пластика, остеопластика)</td><td>1 ед.</td><td>20000</td></tr>
-              <tr><td>А16.07.055</td><td>Хр.07</td><td>Синус-лифтинг открытый (костная пластика, остеопластика)</td><td>1 ед.</td><td>80000</td></tr>
-              <tr><td>A16.07.044.003</td><td>Хр.08</td><td>Пластика десны</td><td>1 ед.</td><td>10000</td></tr>
-              <tr><td>A16.07.006.007</td><td>Хр.09</td><td>Установка мультиюнита</td><td>1 ед.</td><td>6500</td></tr>
-              <tr><td>A16.07.054.030</td><td>Хр.10</td><td>Внутрикостная дентальная имплантация по концепции «Все на 4»</td><td>1 ед.</td><td>150000</td></tr>
-              <tr><td>A16.07.054.031</td><td>Хр.11</td><td>Внутрикостная дентальная имплантация по концепции «Все на 6»</td><td>1 ед.</td><td>220000</td></tr>
-              <tr><td>А16.07.017.011</td><td>Хр.12</td><td>Костная аугментация</td><td>1 ед.</td><td>20000</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="price-section">
-        <h3>Ортодонтия</h3>
-        <div class="price-table-wrap">
-          <table class="price-table">
-            <thead>
-              <tr>
-                <th>Код услуги</th>
-                <th>№</th>
-                <th>Наименование услуги</th>
-                <th>Ед. изм.</th>
-                <th>Цена, руб.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>В01.063.001</td><td>Орд-01</td><td>Консультация врача-ортодонта</td><td>—</td><td>900</td></tr>
-              <tr><td>—</td><td>Орд-02</td><td>Установка брекет-системы</td><td>2 челюсти</td><td>75000</td></tr>
-              <tr><td>А23.07.001</td><td>Орд-03</td><td>Снятие брекет-системы с чисткой</td><td>2 челюсти</td><td>4000</td></tr>
-              <tr><td>А16.07.048.001</td><td>Орд-04</td><td>Установка металлической лигатуры</td><td>1 ед.</td><td>250</td></tr>
-              <tr><td>А16.07.028.006</td><td>Орд-05</td><td>Установка ретейнера</td><td>1 ед.</td><td>3500</td></tr>
-              <tr><td>А23.07.001.014</td><td>Орд-06</td><td>Установка эластичной цепочки</td><td>1 ед.</td><td>450</td></tr>
-              <tr><td>А23.07.001.022</td><td>Орд-07</td><td>Вторичная фиксация брекета</td><td>1 ед.</td><td>1200</td></tr>
-              <tr><td>А23.07.001.017</td><td>Орд-08</td><td>Фиксация кнопки</td><td>1 ед.</td><td>800</td></tr>
-              <tr><td>А16.07.028</td><td>Орд-09</td><td>Установка расправляющей пружины</td><td>1 ед.</td><td>400</td></tr>
-              <tr><td>А23.07.001.006</td><td>Орд-10</td><td>Замена дуги (TMA)</td><td>1 ед.</td><td>3500</td></tr>
-              <tr><td>А23.07.001.005</td><td>Орд-11</td><td>Замена дуги (CuNiTi)</td><td>1 ед.</td><td>1750</td></tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </section>
 
-    <section id="license">
-      <h2>Лицензия и виды деятельности</h2>
-      <div class="card">
-        <p>Лицензия на медицинскую деятельность № <strong>Л041‑01153‑30/00319289</strong> от <strong>19.02.2018</strong>, выдана Министерством здравоохранения Астраханской области. Срок действия: <strong>бессрочно</strong>. Место осуществления деятельности: <strong>Астраханская обл., Приволжский район, с. Карагали, ул. Паромная, д. 5</strong>.</p>
-        <p>Виды помощи по приложению к лицензии: первичная доврачебная, врачебная и специализированная медико‑санитарная помощь в амбулаторных условиях; стоматология <em>терапевтическая, ортопедическая, хирургическая</em>.</p>
-        <p>
-          <!-- #TODO прикрепить файлы -->
-          <a href="./documents/Выписка из реестра лицензий.PDF" download>Скачать выписку из реестра лицензий (PDF)</a> ·
-          <a href="./documents/Лицензия на осуществление медицинской деятельности.pdf" download>Лицензия на осуществление медицинской деятельности</a>
-        </p>
-       
+    <section id="license" class="section">
+      <div class="container legal-grid">
+        <article class="legal-card reveal">
+          <span class="eyebrow">Лицензия</span>
+          <h2>Медицинская деятельность ведётся на основании действующей лицензии</h2>
+          <p>Лицензия № Л041-01153-30/00319289 от 19.02.2018. Адрес осуществления деятельности: Астраханская область, Приволжский район, с. Карагали, ул. Паромная, д. 5.</p>
+          <div class="legal-actions">
+            <a href="./documents/Выписка из реестра лицензий.PDF" download>Выписка из реестра лицензий</a>
+            <a href="./documents/Лицензия на осуществление медицинской деятельности.pdf" download>Скачать лицензию</a>
+          </div>
+        </article>
+        <article id="policy" class="legal-card reveal">
+          <span class="eyebrow">Персональные данные</span>
+          <h2>Политика конфиденциальности и правовая прозрачность</h2>
+          <p>Оператор персональных данных — ООО «Радмар». Мы используем персональные данные только для записи, обратной связи и исполнения договорных обязательств в рамках действующего законодательства РФ.</p>
+          <div class="legal-actions">
+            <a href="./documents/1  Политика ООО РАДМАР (это все о персональных наших.docx" download>Полный текст Политики обработки персональных данных</a>
+            <a href="./documents/Общее положение об персональных данных для сайта Радмар.docx" download>Общее положение о персональных данных</a>
+          </div>
+        </article>
       </div>
     </section>
-
-    <section id="docs">
-      <h2>Документы</h2>
-      <div class="card">
-        <ul>
-          <li>Приказ о порядке приёма и рассмотрения обращений граждан — <a href="./documents/Приказ о порядке приема и рассмотрения обращений граждан ООО Радмар.PDF" download>скачать (PDF)</a></li>
-          <li>Положение о предоставлении платных медицинских услуг — <a href="./documents/приказ о предост мед услуг Радмар.PDF" download>скачать (PDF)</a></li>
-          <li>Формы информированных согласий — <a href="./documents/приказ о предост мед услуг Радмар.PDF" download>в составе Положения (PDF)</a></li>
-          <li>Реквизиты организации — <a href="./documents/Реквизиты ООО Радмар.docx" download>скачать (DOCX)</a></li>
-          <li>Контакты — <a href="./documents/Контакты Радмар.docx" download>скачать (DOCX)</a></li>
-          <li>О врачах — <a href="./documents/О  Врачах.docx" download>скачать (DOCX)</a></li>
-          <li>Сведения о контролирующих организациях — <a href="./documents/Сведения о контролирующих организациях.docx" download>скачать (DOCX)</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="patient">
-      <h2>Пациенту</h2>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
-        <div class="card">
-          <h3>Права и обязанности пациента</h3>
-          <p class="muted">Кратко: право на информацию, выбор врача, информированное согласие, соблюдение режима и др.</p>
-          <a href="#" class="btn secondary" aria-disabled="true">#TODO опубликовать полный текст</a>
-        </div>
-        <div class="card">
-          <h3>Правила записи и подготовки</h3>
-          <ul class="muted">
-            <li>Запись по телефону, через форму на сайте или в регистратуре.</li>
-            <li>Подготовка к исследованиям и оперативным вмешательствам — <span class="muted">#TODO добавить инструкции</span></li>
-          </ul>
-        </div>
-        <div class="card" id="contract">
-          <h3>Платные услуги и договор</h3>
-          <p class="muted">Способы оплаты: <span class="muted">#TODO указать (наличные/карта/онлайн‑оплата)</span>. Сроки ожидания: <span class="muted">#TODO</span>. Льготы: <span class="muted">#TODO (если есть)</span>.</p>
-          <p><a href="#" aria-disabled="true">#TODO Скачать образец договора</a></p>
-          <p class="muted">Дистанционный договор через сайт возможен при идентификации пациента и согласии с условиями. Требуется электронная подпись/подтверждение акцепта. <span class="muted">#TODO интеграция оплаты/ЕСИА при необходимости</span>.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="policy">
-      <h2>Политика обработки персональных данных</h2>
-      <div class="card">
-        <p><strong>Оператор:</strong> ООО «РАДМАР», ОГРН 1073019001186, ИНН/КПП 3009015215/300901001, адрес: Астраханская обл., Приволжский район, с. Карагали, ул. Паромная, д. 5.</p>
-        <p><strong>Цели обработки:</strong> организация записи на приём, обработка обращений и отзывов, заключение и исполнение договоров на оказание медицинских услуг.</p>
-        <p><strong>Перечень ПДн:</strong> ФИО, контактный телефон, e‑mail, сведения из обращений. Медицинская информация через сайт не запрашивается.</p>
-        <p><strong>Правовые основания:</strong> ст. 6, 9 152‑ФЗ, Правила оказания платных медуслуг, договор на оказание услуг. <span class="muted">#TODO указать локальные акты/приказы</span></p>
-        <p><strong>Сроки хранения:</strong> в течение сроков, необходимых для целей обработки и установленных законодательством. <span class="muted">#TODO конкретизировать сроки</span></p>
-        <p><strong>Права субъекта ПДн:</strong> доступ, уточнение, блокирование, удаление; отзыв согласия; направление запросов на <a href="mailto:rad-mar@bk.ru">rad-mar@bk.ru</a>.</p>
-        <p><strong>Политика обработки персональных данных:</strong> <a href="./documents/1  Политика ООО РАДМАР (это все о персональных наших.docx" download>скачать (DOCX)</a></p>
-        <p><strong>Общее положение о персональных данных:</strong> <a href="./documents/Общее положение об персональных данных для сайта Радмар.docx" download>скачать (DOCX)</a></p>
-      </div>
-    </section>
-
-    <section id="pharm">
-      <h2>Перечни лекарственных средств</h2>
-      <div class="card">
-        <ul>
-          <li>ЖНВЛП — <a href="#" aria-disabled="true">#TODO ссылка</a></li>
-          <li>Перечни по распоряжению Правительства № 2406‑р — <a href="#" aria-disabled="true">#TODO ссылка</a></li>
-          <li>Льготные по Постановлению № 890 — <a href="#" aria-disabled="true">#TODO ссылка</a></li>
-        </ul>
-        <span class="todo">#TODO: добавить актуальные ссылки/таблицы</span>
-      </div>
-    </section>
-
-    <section id="contacts">
-      <h2>Контакты</h2>
-      <div class="card">
-        <p><strong>Адрес:</strong> Астраханская обл., Приволжский район, с. Карагали, ул. Паромная, д. 5</p>
-        <p><strong>Телефон:</strong> <a href="tel:+79086141323">+7 (908) 614‑13‑23</a> · <strong>E‑mail:</strong> <a href="mailto:rad-mar@bk.ru">rad-mar@bk.ru</a></p>
-        <p><strong>Контролирующие органы:</strong> <span class="muted">#TODO добавить контакты территориального Росздравнадзора, Роспотребнадзора, регионального минздрава</span></p>
-      </div>
-    </section>
-
-
   </main>
 
-  <footer>
-    <div class="container footerGrid">
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div>
-        <h3>ООО «РАДМАР»</h3>
-        <p class="muted">ОГРН 1073019001186 · ИНН/КПП 3009015215/300901001</p>
-        <p class="muted">Юр. адрес: 416463, Астраханская обл., Приволжский район, с. Карагали, ул. Паромная, д. 5</p>
-        <p class="muted">Лицензия: Л041‑01153‑30/00319289 от 19.02.2018 (бессрочно)</p>
-        <p class="muted">© <span id="year"></span> ООО «РАДМАР». Все права защищены.</p>
+        <h3>Стоматология «Радмар»</h3>
+        <p>Премиальный подход к терапии, ортопедии, хирургии и эстетике улыбки.</p>
       </div>
       <div>
-        <h3>Пациенту</h3>
-        <ul class="muted">
-          <li><a href="#patient">Права и обязанности</a></li>
-          <li><a href="#contract">Договор и оплата</a></li>
-          <li><a href="#docs">Документы</a></li>
+        <h3>Навигация</h3>
+        <ul>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#doctors">Врачи</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
       </div>
       <div>
-        <h3>Правовая информация</h3>
-        <ul class="muted">
-          <li><a href="#policy">Политика ПДн</a></li>
-          <li><a href="#license">Лицензия</a></li>
+        <h3>Контакты</h3>
+        <ul>
+          <li><a href="tel:+79086141323">+7 (908) 614-13-23</a></li>
+          <li><a href="mailto:rad-mar@bk.ru">rad-mar@bk.ru</a></li>
+          <li>Астраханская область, с. Карагали, ул. Паромная, 5</li>
         </ul>
       </div>
     </div>
   </footer>
 
   <script>
-    // Версия для слабовидящих
-    const a11yBtn = document.getElementById('a11yToggle');
-    a11yBtn?.addEventListener('click', ()=>{
-      const on = document.body.classList.toggle('a11y');
-      a11yBtn.setAttribute('aria-pressed', on? 'true':'false');
-    });
-
-    // Бургер-меню
+    const body = document.body;
+    const a11yToggle = document.getElementById('a11yToggle');
     const menuToggle = document.getElementById('menuToggle');
-    const navlinks = document.querySelector('.navlinks');
-    
-    menuToggle?.addEventListener('click', ()=>{
-      const isOpen = menuToggle.getAttribute('aria-pressed') === 'true';
-      menuToggle.setAttribute('aria-pressed', !isOpen);
-      navlinks.classList.toggle('active');
-    });
-
-    // Закрыть меню при клике на ссылку
-    navlinks?.addEventListener('click', (e)=>{
-      if(e.target.tagName === 'A'){
-        menuToggle.setAttribute('aria-pressed', 'false');
-        navlinks.classList.remove('active');
-      }
-    });
-
-    // Год в футере
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Поиск по прейскуранту
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.querySelectorAll('.site-nav a, .mobile-menu a');
+    const comparisonRange = document.getElementById('comparisonRange');
+    const comparisonAfterShell = document.getElementById('comparisonAfterShell');
+    const comparisonDivider = document.getElementById('comparisonDivider');
+    const revealItems = document.querySelectorAll('.reveal');
     const priceSearch = document.getElementById('priceSearch');
-    const priceSections = Array.from(document.querySelectorAll('.price-section'));
-    const priceSearchEmpty = document.getElementById('priceSearchEmpty');
+    const priceDetails = Array.from(document.querySelectorAll('.price-details'));
+    const priceEmpty = document.getElementById('priceSearchEmpty');
+    const appointmentForm = document.getElementById('appointmentForm');
+    const appointmentStatus = document.getElementById('appointmentStatus');
+    const whatsAppBooking = document.getElementById('whatsAppBooking');
+
+    a11yToggle?.addEventListener('click', () => {
+      const on = body.classList.toggle('a11y');
+      a11yToggle.setAttribute('aria-pressed', String(on));
+    });
+
+    menuToggle?.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      mobileMenu.hidden = isOpen;
+      body.classList.toggle('menu-open', !isOpen);
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (!mobileMenu.hidden) {
+          mobileMenu.hidden = true;
+          menuToggle.setAttribute('aria-expanded', 'false');
+          body.classList.remove('menu-open');
+        }
+      });
+    });
+
+    const updateComparison = (value) => {
+      comparisonAfterShell.style.width = value + '%';
+      comparisonDivider.style.left = value + '%';
+    };
+
+    comparisonRange?.addEventListener('input', (event) => {
+      updateComparison(event.target.value);
+    });
+    updateComparison(comparisonRange?.value || 54);
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    revealItems.forEach((item) => revealObserver.observe(item));
 
     const updatePriceSearch = () => {
       const query = (priceSearch?.value || '').trim().toLowerCase();
-      let visibleRowsCount = 0;
+      let totalVisible = 0;
 
-      priceSections.forEach((section) => {
-        const rows = Array.from(section.querySelectorAll('tbody tr'));
-        let sectionVisibleRows = 0;
-        let currentGroupRow = null;
-        let currentGroupMatches = 0;
+      priceDetails.forEach((details) => {
+        const rows = Array.from(details.querySelectorAll('tbody tr'));
+        let visibleInSection = 0;
+        let currentGroup = null;
+        let currentGroupVisible = 0;
 
         const flushGroup = () => {
-          if (currentGroupRow) {
-            currentGroupRow.hidden = currentGroupMatches === 0 && query !== '';
+          if (currentGroup) {
+            currentGroup.hidden = query !== '' && currentGroupVisible === 0;
           }
         };
 
         rows.forEach((row) => {
           if (row.classList.contains('price-group-row')) {
             flushGroup();
-            currentGroupRow = row;
-            currentGroupMatches = 0;
+            currentGroup = row;
+            currentGroupVisible = 0;
             row.hidden = false;
             return;
           }
@@ -609,26 +873,58 @@
           row.hidden = !match;
 
           if (match) {
-            sectionVisibleRows += 1;
-            visibleRowsCount += 1;
-            if (currentGroupRow) {
-              currentGroupMatches += 1;
-            }
+            visibleInSection += 1;
+            totalVisible += 1;
+            if (currentGroup) currentGroupVisible += 1;
           }
         });
 
         flushGroup();
-        section.hidden = sectionVisibleRows === 0;
+        details.hidden = visibleInSection === 0;
+        if (query !== '') details.open = visibleInSection > 0;
       });
 
-      if (priceSearchEmpty) {
-        priceSearchEmpty.hidden = visibleRowsCount !== 0 || query === '';
+      if (priceEmpty) {
+        priceEmpty.hidden = !(query !== '' && totalVisible === 0);
       }
     };
 
     priceSearch?.addEventListener('input', updatePriceSearch);
     updatePriceSearch();
 
+    appointmentForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(appointmentForm);
+      const name = formData.get('name') || '';
+      const phone = formData.get('phone') || '';
+      const service = formData.get('service') || '';
+      const message = formData.get('message') || '';
+      const subject = encodeURIComponent('Заявка с сайта Радмар');
+      const bodyText = encodeURIComponent(
+        'Имя: ' + name + '\n' +
+        'Телефон: ' + phone + '\n' +
+        'Направление: ' + service + '\n' +
+        'Комментарий: ' + message
+      );
+      window.location.href = 'mailto:rad-mar@bk.ru?subject=' + subject + '&body=' + bodyText;
+      appointmentStatus.textContent = 'Открылось письмо для отправки заявки. Если почтовое приложение не запустилось, свяжитесь с клиникой по телефону.';
+    });
+
+    whatsAppBooking?.addEventListener('click', () => {
+      const formData = new FormData(appointmentForm);
+      const name = formData.get('name') || '';
+      const phone = formData.get('phone') || '';
+      const service = formData.get('service') || '';
+      const message = formData.get('message') || '';
+      const text = encodeURIComponent(
+        'Здравствуйте! Хочу записаться в клинику «Радмар».' +
+        '\nИмя: ' + name +
+        '\nТелефон: ' + phone +
+        '\nНаправление: ' + service +
+        '\nКомментарий: ' + message
+      );
+      window.open('https://wa.me/79086141323?text=' + text, '_blank', 'noopener');
+    });
   </script>
 </body>
 </html>
