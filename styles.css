@@ -247,20 +247,12 @@ p{margin:0 0 1rem}
   padding:56px 0 92px;
 }
 .hero-grid{
-  display:grid;
-  grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr);
-  gap:38px;
-  align-items:center;
-}
-
-.hero-copy{
-  display:grid;
-  gap:24px;
+  display:block;
 }
 
 .lead{
   font-size:1.08rem;
-  max-width:680px;
+  max-width:60ch;
 }
 
 .hero-actions{
@@ -273,7 +265,7 @@ p{margin:0 0 1rem}
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:16px;
-  margin-top:8px;
+  margin-top:22px;
 }
 
 .glass-card,
@@ -318,19 +310,44 @@ p{margin:0 0 1rem}
 
 .hero-photo-shell{
   position:relative;
-  min-height:640px;
+  min-height:700px;
   padding:24px;
   border-radius:40px;
   background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,.45));
   border:1px solid rgba(255,255,255,.9);
   box-shadow:0 30px 90px rgba(18,53,61,.12);
+  overflow:hidden;
 }
 
 .hero-photo{
   width:100%;
-  height:592px;
+  height:652px;
   object-fit:cover;
   border-radius:30px;
+}
+
+.hero-overlay{
+  position:absolute;
+  left:54px;
+  top:54px;
+  z-index:2;
+  max-width:min(640px,calc(100% - 140px));
+  display:grid;
+  gap:22px;
+  padding:34px 36px;
+  border-radius:32px;
+  background:rgba(255,255,255,.42);
+  border:1px solid rgba(255,255,255,.62);
+  box-shadow:0 26px 80px rgba(18,53,61,.14);
+  backdrop-filter:blur(18px) saturate(140%);
+}
+.hero-overlay h1{
+  color:#243137;
+  max-width:10.5ch;
+}
+.hero-overlay .lead{
+  color:rgba(36,49,55,.78);
+  max-width:44ch;
 }
 
 .floating-card{
@@ -940,7 +957,8 @@ body.a11y a{color:#000 !important;text-decoration:underline}
 body.a11y .price-table th,
 body.a11y .price-group-row td{background:#fff !important;color:#000 !important}
 body.a11y .hero-photo-shell,
-body.a11y .floating-card{background:#fff !important;border-color:#000 !important;box-shadow:none !important}
+body.a11y .floating-card,
+body.a11y .hero-overlay{background:#fff !important;border-color:#000 !important;box-shadow:none !important}
 
 @media (max-width:1180px){
   .hero-grid,
@@ -965,6 +983,12 @@ body.a11y .floating-card{background:#fff !important;border-color:#000 !important
 
   .hero-stats{
     grid-template-columns:1fr;
+  }
+
+  .hero-overlay{
+    max-width:min(600px,calc(100% - 110px));
+    left:40px;
+    top:40px;
   }
 }
 
@@ -991,7 +1015,14 @@ body.a11y .floating-card{background:#fff !important;border-color:#000 !important
     min-height:auto;
   }
   .hero-photo{
-    height:420px;
+    height:520px;
+  }
+  .hero-overlay{
+    left:24px;
+    right:24px;
+    top:24px;
+    max-width:none;
+    padding:26px 24px;
   }
   .floating-card{
     position:static;
@@ -1031,7 +1062,17 @@ body.a11y .floating-card{background:#fff !important;border-color:#000 !important
     gap:24px;
   }
   .hero-photo{
-    height:360px;
+    height:460px;
+  }
+  .hero-overlay{
+    left:18px;
+    right:18px;
+    top:18px;
+    padding:20px 18px;
+    gap:16px;
+  }
+  .hero-overlay h1{
+    max-width:none;
   }
   .comparison-frame,
   .comparison-image{
