@@ -767,14 +767,17 @@
     });
 
     const updateComparison = (value) => {
+      if (!comparisonAfterShell || !comparisonDivider) return;
       comparisonAfterShell.style.width = value + '%';
       comparisonDivider.style.left = value + '%';
     };
 
-    comparisonRange?.addEventListener('input', (event) => {
-      updateComparison(event.target.value);
-    });
-    updateComparison(comparisonRange?.value || 54);
+    if (comparisonRange && comparisonAfterShell && comparisonDivider) {
+      comparisonRange.addEventListener('input', (event) => {
+        updateComparison(event.target.value);
+      });
+      updateComparison(comparisonRange.value || 54);
+    }
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
