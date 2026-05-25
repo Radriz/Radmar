@@ -984,6 +984,34 @@ p{margin:0 0 1rem}
   box-shadow:var(--shadow-soft);
 }
 
+.compliance-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.compliance-list{
+  margin:0;
+  padding-left:18px;
+  color:var(--text-soft);
+  display:grid;
+  gap:12px;
+}
+.disclaimer-card{
+  margin-top:22px;
+  padding:28px 30px;
+  border-radius:28px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.86);
+  box-shadow:var(--shadow-soft);
+}
+.disclaimer-card p{
+  margin:0;
+  color:var(--text-soft);
+}
+.disclaimer-card p + p{
+  margin-top:14px;
+}
+
 .site-footer{
   padding:36px 0 56px;
   border-top:1px solid rgba(26,60,67,.08);
@@ -1036,6 +1064,7 @@ body.a11y .vacancy-card,
 body.a11y .contact-card,
 body.a11y .schedule-card,
 body.a11y .appointment-card,
+body.a11y .disclaimer-card,
 body.a11y .price-details,
 body.a11y .comparison-card,
 body.a11y .media-card,
@@ -1074,6 +1103,7 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
   .services-grid,
   .reviews-grid,
   .docs-grid,
+  .compliance-grid,
   .info-grid,
   .cases-grid{
     grid-template-columns:repeat(2,minmax(0,1fr));
@@ -1155,6 +1185,7 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
   .services-grid,
   .reviews-grid,
   .docs-grid,
+  .compliance-grid,
   .info-grid,
   .cases-grid,
   .doctors-premium-grid,
