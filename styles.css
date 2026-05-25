@@ -193,7 +193,7 @@ button,input,select,textarea{font:inherit}
 }
 
 .section{
-  padding:100px 0;
+  padding:76px 0;
 }
 .section-soft{
   background:linear-gradient(180deg,rgba(255,255,255,.36),rgba(255,255,255,.66));
@@ -227,9 +227,9 @@ p{margin:0 0 1rem}
 
 .section-head{
   display:grid;
-  gap:18px;
+  gap:14px;
   max-width:760px;
-  margin-bottom:40px;
+  margin-bottom:28px;
 }
 .section-head p,
 .lead,
@@ -244,7 +244,7 @@ p{margin:0 0 1rem}
 }
 
 .hero-section{
-  padding:42px 0 92px;
+  padding:32px 0 68px;
 }
 .hero-grid{
   display:block;
@@ -272,7 +272,7 @@ p{margin:0 0 1rem}
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:16px;
-  margin-top:22px;
+  margin-top:16px;
 }
 
 .glass-card,
@@ -384,27 +384,37 @@ p{margin:0 0 1rem}
   display:flex;
   flex-wrap:wrap;
   gap:18px;
-  padding-top:6px;
+  padding-top:2px;
 }
 .hero-benefit{
-  display:grid;
-  justify-items:start;
-  gap:10px;
-  min-width:118px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+  padding:10px 14px;
+  border-radius:20px;
+  background:rgba(255,255,255,.42);
+  border:1px solid rgba(255,255,255,.68);
+  backdrop-filter:blur(10px);
+  box-shadow:0 12px 26px rgba(34,83,108,.08);
 }
 .hero-benefit strong{
-  font-size:.96rem;
-  color:#20384d;
-  font-weight:600;
+  display:block;
+  font-size:.98rem;
+  line-height:1.15;
+  color:#163047;
+  font-weight:700;
+  text-shadow:0 1px 0 rgba(255,255,255,.28);
 }
 .hero-benefit-icon{
-  width:52px;
-  height:52px;
+  width:46px;
+  height:46px;
+  flex:0 0 46px;
   display:grid;
   place-items:center;
   border-radius:50%;
-  background:rgba(255,255,255,.5);
-  border:1px solid rgba(255,255,255,.7);
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.88);
   backdrop-filter:blur(10px);
   box-shadow:0 14px 30px rgba(49,104,131,.08);
 }
@@ -1119,6 +1129,9 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
   .hero-benefits{
     gap:14px;
   }
+  .hero-benefit{
+    padding:9px 12px;
+  }
   .floating-card{
     position:static;
     margin-top:14px;
@@ -1132,7 +1145,7 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
 
 @media (max-width:720px){
   .section{
-    padding:72px 0;
+    padding:64px 0;
   }
 
   .container{
@@ -1151,7 +1164,7 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
   }
 
   .hero-section{
-    padding:32px 0 72px;
+    padding:24px 0 56px;
   }
   .hero-grid{
     gap:24px;
@@ -1173,7 +1186,7 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
     max-width:28ch;
   }
   .hero-benefit{
-    min-width:92px;
+    width:100%;
   }
   .hero-overlay .primary-button{
     min-width:100%;
