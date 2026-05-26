@@ -203,6 +203,9 @@ button,input,select,textarea{font:inherit}
   display:inline-flex;
   align-items:center;
   gap:6px;
+  width:max-content;
+  max-width:100%;
+  justify-self:start;
   min-height:32px;
   padding:6px 12px;
   border-radius:12px;
