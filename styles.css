@@ -1241,7 +1241,7 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
     height:42px;
   }
   .hero-photo{
-    height:560px;
+    height:500px;
   }
   .hero-overlay{
     left:18px;
@@ -1251,11 +1251,11 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
   }
   .hero-overlay h1{
     max-width:11ch;
-    font-size:clamp(2.15rem,9.5vw,3.2rem);
+    font-size:clamp(1.9rem,8.4vw,2.7rem);
     gap:2px;
   }
   .hero-overlay .lead{
-    font-size:.96rem;
+    font-size:.9rem;
     line-height:1.42;
     max-width:24ch;
   }
@@ -1268,6 +1268,7 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
   .hero-benefit{
     width:100%;
     border-radius:18px;
+    padding:7px 10px;
   }
   .hero-benefit strong{
     font-size:.9rem;
@@ -1283,7 +1284,7 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
   }
   .hero-overlay .primary-button{
     min-width:100%;
-    padding:14px 18px;
+    padding:13px 18px;
   }
   .comparison-frame,
   .comparison-image{
