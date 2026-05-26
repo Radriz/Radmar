@@ -193,7 +193,7 @@ button,input,select,textarea{font:inherit}
 }
 
 .section{
-  padding:76px 0;
+  padding:30px 0;
 }
 .section-soft{
   background:linear-gradient(180deg,rgba(255,255,255,.36),rgba(255,255,255,.66));
@@ -206,13 +206,13 @@ button,input,select,textarea{font:inherit}
   width:max-content;
   max-width:100%;
   justify-self:start;
-  min-height:32px;
-  padding:6px 12px;
+  min-height:36px;
+  padding:8px 16px;
   border-radius:12px;
   background:rgba(255,255,255,.58);
   border:1px solid rgba(29,140,143,.14);
   color:var(--accent-strong);
-  font-size:.8rem;
+  font-size:.88rem;
   font-weight:800;
   line-height:1;
   letter-spacing:.08em;
@@ -1198,7 +1198,7 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
 
 @media (max-width:720px){
   .section{
-    padding:64px 0;
+    padding:30px 0;
   }
 
   .container{
