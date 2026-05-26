@@ -1161,11 +1161,11 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
   }
 
   .hero-photo-shell{
-    min-height:auto;
+    min-height:680px;
     border-radius:30px;
   }
   .hero-photo{
-    height:620px;
+    height:680px;
     border-radius:30px;
   }
   .hero-overlay{
@@ -1241,7 +1241,10 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
     height:42px;
   }
   .hero-photo{
-    height:500px;
+    height:620px;
+  }
+  .hero-photo-shell{
+    min-height:620px;
   }
   .hero-overlay{
     left:18px;
