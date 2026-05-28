@@ -275,17 +275,17 @@
             <input id="priceSearch" type="search" placeholder="Например: имплантация, коронка, Т-21, 2500">
           </label>
           <div class="price-toolbar-links">
-            <a href="./documents/ПРАЙС терапия.docx" download>Терапия</a>
-            <a href="./documents/ПРАЙС с кодами ОРТОПЕДИЯ.doc" download>Ортопедия</a>
-            <a href="./documents/Прайс раздел ХИРУРГИЯ.docx" download>Хирургия</a>
-            <a href="./documents/Прайс сКодами ОРТОДОНТИЯ.docx" download>Ортодонтия</a>
+            <a href="#price-therapy">Терапия</a>
+            <a href="#price-orthopedics">Ортопедия</a>
+            <a href="#price-surgery">Хирургия</a>
+            <a href="#price-orthodontics">Ортодонтия</a>
           </div>
         </div>
 
         <p id="priceSearchEmpty" class="price-empty" hidden>По вашему запросу услуги не найдены. Попробуйте изменить формулировку поиска.</p>
 
         <div class="price-accordion">
-          <details class="price-details reveal" open>
+          <details id="price-therapy" class="price-details reveal" open>
             <summary>Стоматология терапевтическая</summary>
             <div class="price-table-wrap">
               <table class="price-table">
@@ -346,7 +346,7 @@
             </div>
           </details>
 
-          <details class="price-details reveal">
+          <details id="price-orthopedics" class="price-details reveal">
             <summary>Стоматология ортопедическая</summary>
             <div class="price-table-wrap">
               <table class="price-table">
@@ -391,7 +391,7 @@
             </div>
           </details>
 
-          <details class="price-details reveal">
+          <details id="price-surgery" class="price-details reveal">
             <summary>Хирургический прием</summary>
             <div class="price-table-wrap">
               <table class="price-table">
@@ -422,7 +422,7 @@
             </div>
           </details>
 
-          <details class="price-details reveal">
+          <details id="price-orthodontics" class="price-details reveal">
             <summary>Ортодонтия</summary>
             <div class="price-table-wrap">
               <table class="price-table">
