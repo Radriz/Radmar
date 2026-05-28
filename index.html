@@ -640,6 +640,10 @@
                 <span>Комментарий</span>
                 <textarea name="message" rows="4" placeholder="Коротко опишите запрос или удобное время для связи"></textarea>
               </label>
+              <label class="consent-check">
+                <input type="checkbox" name="personalDataConsent" required>
+                <span>Я даю согласие ООО «Радмар» на обработку моих персональных данных для связи со мной и записи на прием, подтверждаю ознакомление с <a href="./documents/1  Политика ООО РАДМАР (это все о персональных наших.docx" download>Политикой обработки персональных данных</a></span>
+              </label>
               <div class="appointment-actions">
                 <button class="primary-button" type="submit">Отправить заявку</button>
                 <button class="secondary-button" type="button" id="maxBooking">Открыть MAX</button>
@@ -848,6 +852,10 @@
 
     appointmentForm?.addEventListener('submit', (event) => {
       event.preventDefault();
+      if (!appointmentForm.checkValidity()) {
+        appointmentForm.reportValidity();
+        return;
+      }
       const formData = new FormData(appointmentForm);
       const name = formData.get('name') || '';
       const phone = formData.get('phone') || '';
@@ -858,7 +866,8 @@
         'Имя: ' + name + '\n' +
         'Телефон: ' + phone + '\n' +
         'Направление: ' + service + '\n' +
-        'Комментарий: ' + message
+        'Комментарий: ' + message + '\n' +
+        'Согласие на обработку персональных данных: получено'
       );
       window.location.href = 'mailto:rad-mar@bk.ru?subject=' + subject + '&body=' + bodyText;
       appointmentStatus.textContent = 'Открылось письмо для отправки заявки. Если почтовое приложение не запустилось, свяжитесь с клиникой по телефону.';

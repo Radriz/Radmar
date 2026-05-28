@@ -953,6 +953,31 @@ p{margin:0 0 1rem}
   border:1px solid var(--line-strong);
   background:#fcfcfb;
 }
+.appointment-form .consent-check{
+  display:grid;
+  grid-template-columns:20px 1fr;
+  align-items:start;
+  gap:10px;
+  color:var(--text-soft);
+  font-size:.9rem;
+  line-height:1.45;
+}
+.appointment-form .consent-check input{
+  width:18px;
+  height:18px;
+  margin:2px 0 0;
+  padding:0;
+  border-radius:4px;
+  accent-color:var(--accent);
+}
+.appointment-form .consent-check span{
+  color:var(--text-soft);
+  font-size:inherit;
+  font-weight:500;
+}
+.appointment-form .consent-check a{
+  font-weight:700;
+}
 .appointment-actions{
   display:flex;
   flex-wrap:wrap;
