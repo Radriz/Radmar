@@ -870,26 +870,12 @@
         appointmentForm.reportValidity();
         return;
       }
-      const formData = new FormData(appointmentForm);
-      const name = formData.get('name') || '';
-      const phone = formData.get('phone') || '';
-      const service = formData.get('service') || '';
-      const message = formData.get('message') || '';
-      const requestText = (
-        'Заявка с сайта Радмар\n' +
-        'Имя: ' + name + '\n' +
-        'Телефон: ' + phone + '\n' +
-        'Направление: ' + service + '\n' +
-        'Комментарий: ' + message + '\n' +
-        'Согласие на обработку персональных данных: получено'
-      );
-      const maxShareUrl = 'https://max.ru/:share?text=' + encodeURIComponent(requestText);
-      window.open(maxShareUrl, '_blank', 'noopener');
-      appointmentStatus.textContent = 'Открылся MAX с текстом заявки. Выберите чат клиники и отправьте сообщение.';
+      window.open('https://max.ru/u/f9LHodD0cOJQsQkSuQOboCkOjOPRnBfQc_xNxs8d8J2Yc3J5BFNWVFv81FM', '_blank', 'noopener');
+      appointmentStatus.textContent = 'Открылся MAX. Отправьте сообщение администратору для записи.';
     });
 
     maxBooking?.addEventListener('click', () => {
-      window.open('https://max.ru/', '_blank', 'noopener');
+      window.open('https://max.ru/u/f9LHodD0cOJQsQkSuQOboCkOjOPRnBfQc_xNxs8d8J2Yc3J5BFNWVFv81FM', '_blank', 'noopener');
     });
   </script>
 </body>
