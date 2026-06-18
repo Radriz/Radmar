@@ -762,7 +762,6 @@
     </p>
     <div class="cookie-actions">
       <button class="primary-button" type="button" id="cookieAccept">Принять</button>
-      <button class="secondary-button" type="button" id="cookieDecline">Отказаться</button>
     </div>
   </div>
 
@@ -784,7 +783,6 @@
     const maxBooking = document.getElementById('maxBooking');
     const cookieBanner = document.getElementById('cookieBanner');
     const cookieAccept = document.getElementById('cookieAccept');
-    const cookieDecline = document.getElementById('cookieDecline');
 
     a11yToggle?.addEventListener('click', () => {
       const on = body.classList.toggle('a11y');
@@ -917,12 +915,6 @@
     cookieAccept?.addEventListener('click', () => {
       setCookieAccepted();
       cookieBanner?.setAttribute('hidden', '');
-    });
-
-    cookieDecline?.addEventListener('click', () => {
-      window.open('', '_self');
-      window.close();
-      window.location.replace('about:blank');
     });
   </script>
 </body>
