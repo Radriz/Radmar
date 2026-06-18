@@ -1132,6 +1132,47 @@ p{margin:0 0 1rem}
   gap:18px;
   border-left:4px solid var(--accent);
 }
+.cookie-banner{
+  position:fixed;
+  left:50%;
+  bottom:18px;
+  z-index:1200;
+  width:min(1120px,calc(100% - 32px));
+  transform:translateX(-50%);
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:18px;
+  padding:18px 20px;
+  border-radius:24px;
+  background:rgba(255,255,255,.96);
+  border:1px solid rgba(26,60,67,.12);
+  box-shadow:0 24px 70px rgba(18,53,61,.18);
+}
+.cookie-banner[hidden]{
+  display:none;
+}
+.cookie-banner p{
+  margin:0;
+  color:var(--text-soft);
+  font-size:.95rem;
+  line-height:1.45;
+}
+.cookie-banner a{
+  color:var(--accent-strong);
+  font-weight:700;
+}
+.cookie-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:10px;
+}
+.cookie-actions .primary-button,
+.cookie-actions .secondary-button{
+  padding:11px 18px;
+  white-space:nowrap;
+}
 
 .reveal{
   opacity:0;
@@ -1162,6 +1203,7 @@ body.a11y .schedule-card,
 body.a11y .appointment-card,
 body.a11y .disclaimer-card,
 body.a11y .footer-legal-card,
+body.a11y .cookie-banner,
 body.a11y .price-details,
 body.a11y .comparison-card,
 body.a11y .media-card,
@@ -1323,6 +1365,22 @@ body.a11y .hero-benefit-icon{background:#fff !important;border-color:#000 !impor
   .header-shell{
     gap:10px;
     min-height:72px;
+  }
+  .cookie-banner{
+    grid-template-columns:1fr;
+    align-items:start;
+    bottom:14px;
+    width:calc(100% - 24px);
+    padding:16px;
+    border-radius:20px;
+  }
+  .cookie-actions{
+    width:100%;
+    justify-content:stretch;
+  }
+  .cookie-actions .primary-button,
+  .cookie-actions .secondary-button{
+    flex:1 1 130px;
   }
   .brand-logo{
     width:96px;

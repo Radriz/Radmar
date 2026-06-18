@@ -638,7 +638,7 @@
               </label>
               <label class="consent-check">
                 <input type="checkbox" name="personalDataConsent" required>
-                <span>Я даю <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fradmar.ru%2Fdocuments%2Fsoglasie-na-obrabotku-personalnyh-dannyh.docx" target="_blank" rel="noopener">согласие ООО «Радмар» на обработку моих персональных данных</a> для связи со мной и записи на прием, подтверждаю ознакомление с <a href="./documents/1  Политика ООО РАДМАР (это все о персональных наших.docx" download>Политикой обработки персональных данных</a></span>
+                <span>Я даю <a href="./documents/soglasie-na-obrabotku-personalnyh-dannyh.docx" download>согласие ООО «Радмар» на обработку моих персональных данных</a> для связи со мной и записи на прием, подтверждаю ознакомление с <a href="./documents/1  Политика ООО РАДМАР (это все о персональных наших.docx" download>Политикой обработки персональных данных</a></span>
               </label>
               <div class="appointment-actions">
                 <button class="primary-button" type="submit">Отправить заявку</button>
@@ -669,7 +669,7 @@
           <div class="legal-actions">
             <a href="./documents/1  Политика ООО РАДМАР (это все о персональных наших.docx" download>Полный текст Политики обработки персональных данных</a>
             <a href="./documents/Общее положение об персональных данных для сайта Радмар.docx" download>Общее положение о персональных данных</a>
-            <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fradmar.ru%2Fdocuments%2Fsoglasie-na-obrabotku-personalnyh-dannyh.docx" target="_blank" rel="noopener">Согласие на обработку персональных данных</a>
+            <a href="./documents/soglasie-na-obrabotku-personalnyh-dannyh.docx" download>Согласие на обработку персональных данных</a>
           </div>
         </article>
       </div>
@@ -697,7 +697,8 @@
           <li><a href="./documents/Реквизиты ООО Радмар.docx" download>Реквизиты ООО «Радмар»</a></li>
           <li><a href="./documents/Лицензия на осуществление медицинской деятельности.pdf" download>Лицензия на осуществление медицинской деятельности</a></li>
           <li><a href="./documents/1  Политика ООО РАДМАР (это все о персональных наших.docx" download>Политика обработки персональных данных</a></li>
-          <li><a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fradmar.ru%2Fdocuments%2Fsoglasie-na-obrabotku-personalnyh-dannyh.docx" target="_blank" rel="noopener">Согласие на обработку персональных данных</a></li>
+          <li><a href="./documents/soglasie-na-obrabotku-personalnyh-dannyh.docx" download>Согласие на обработку персональных данных</a></li>
+          <li><a href="./documents/politika-ispolzovaniya-cookie.docx" download>Политика использования Cookie</a></li>
         </ul>
       </article>
 
@@ -753,6 +754,18 @@
     </div>
   </footer>
 
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Уведомление об использовании cookie">
+    <p>
+      На сайте используются куки файлы (cookie). Продолжая использовать сайт, Вы даете согласие на обработку персональных данных в соответствии с условиями
+      <a href="./documents/1  Политика ООО РАДМАР (это все о персональных наших.docx" download>Политики конфиденциальности</a>.
+      Вы также можете запретить обработку cookies в настройках браузера.
+    </p>
+    <div class="cookie-actions">
+      <button class="primary-button" type="button" id="cookieAccept">Принять</button>
+      <button class="secondary-button" type="button" id="cookieDecline">Отказаться</button>
+    </div>
+  </div>
+
   <script>
     const body = document.body;
     const a11yToggle = document.getElementById('a11yToggle');
@@ -769,6 +782,9 @@
     const appointmentForm = document.getElementById('appointmentForm');
     const appointmentStatus = document.getElementById('appointmentStatus');
     const maxBooking = document.getElementById('maxBooking');
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieAccept = document.getElementById('cookieAccept');
+    const cookieDecline = document.getElementById('cookieDecline');
 
     a11yToggle?.addEventListener('click', () => {
       const on = body.classList.toggle('a11y');
@@ -876,6 +892,37 @@
 
     maxBooking?.addEventListener('click', () => {
       window.open('https://max.ru/u/f9LHodD0cOJQsQkSuQOboCkOjOPRnBfQc_xNxs8d8J2Yc3J5BFNWVFv81FM', '_blank', 'noopener');
+    });
+
+    const getCookieAccepted = () => {
+      try {
+        return window.localStorage?.getItem('radmarCookieAccepted') === 'true';
+      } catch {
+        return false;
+      }
+    };
+
+    const setCookieAccepted = () => {
+      try {
+        window.localStorage?.setItem('radmarCookieAccepted', 'true');
+      } catch {
+        // The banner can still be dismissed for the current page when storage is unavailable.
+      }
+    };
+
+    if (getCookieAccepted()) {
+      cookieBanner?.setAttribute('hidden', '');
+    }
+
+    cookieAccept?.addEventListener('click', () => {
+      setCookieAccepted();
+      cookieBanner?.setAttribute('hidden', '');
+    });
+
+    cookieDecline?.addEventListener('click', () => {
+      window.open('', '_self');
+      window.close();
+      window.location.replace('about:blank');
     });
   </script>
 </body>
