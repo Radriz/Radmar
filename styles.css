@@ -573,6 +573,9 @@ p{margin:0 0 1rem}
   gap:6px;
 }
 .section-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
   margin-top:28px;
 }
 
